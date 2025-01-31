@@ -8,10 +8,6 @@
 /web/profiles/contrib/
 /web/libraries/
 
-# Ignore sensitive information
-/web/sites/*/settings*.php
-/web/sites/*/services*.yml
-
 # Ignore Drupal's file directory
 /web/sites/*/files/
 
@@ -47,6 +43,9 @@
 launch-drupal-cms.sh
 /recipes/
 /web/profiles/drupal_cms_installer/
+
+# Ignore local settings
+/web/sites/*/settings.local.php
 
 # Ignore IDE files
 .idea/
