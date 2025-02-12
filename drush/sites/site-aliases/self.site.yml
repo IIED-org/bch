@@ -1,0 +1,25 @@
+'*':
+  paths:
+    drush-script: /var/www/${env-name}.bch.iied.org/gitroot/bin/drush
+    files: sites/default/files
+    private: ../private_files
+local:
+  root: /app/docroot
+  uri: https://iied-bch.lndo.site
+  paths:
+    private: private_files
+dev:
+  host: kr3.iied.org
+  user: ${env.SSH_USER}
+  root: /var/www/dev.bch.iied.org/gitroot/docroot
+  uri: dev.bch.iied.org
+stage:
+  host: kr3.iied.org
+  user: ${env.SSH_USER}
+  root: /var/www/stage.bch.iied.org/gitroot/docroot
+  uri: stage.bch.iied.org
+prod:
+  host: kr2.iied.org
+  user: ${env.SSH_USER}
+  root: /var/www/prod.bch.iied.org/gitroot/docroot
+  uri: www.bch.iied.org
