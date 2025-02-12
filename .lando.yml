@@ -8,12 +8,19 @@ env_file:
   - .env
 services:
   appserver:
+    xdebug: debug
+    config:
+      php: .lando.php.ini
     overrides:
       environment:
         DRUSH_OPTIONS_ROOT: '/app/web'
         DRUSH_OPTIONS_URI: 'https://iied-bch.lndo.site'
         # Support debugging Drush with XDEBUG. Use lando drush to debug.
-        PHP_IDE_CONFIG: "serverName=localhost"
+        PHP_IDE_CONFIG: "serverName=appserver"
+        LANDO_HOST_IP: "host.docker.internal"
+        XDEBUG_CONFIG: "remote_enable=1 remote_host=host.docker.internal"
+    run:
+      - composer install
   database:
     type: mariadb:10.11
     creds:
@@ -54,10 +61,14 @@ tooling:
   xdebug-on:
     service: appserver
     description: Enable xdebug for apache.
-    cmd: "docker-php-ext-enable xdebug && /etc/init.d/apache2 reload"
+    cmd: 
+      - docker-php-ext-enable xdebug && /etc/init.d/apache2 reload
+      - tput setaf 2 && echo "Xdebug On" && tput sgr 0 && echo
     user: root
   xdebug-off:
     service: appserver
     description: Disable xdebug for apache.
-    cmd: "rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini && /etc/init.d/apache2 reload"
+    cmd:
+      - rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini && /etc/init.d/apache2 reload
+      - tput setaf 2 && echo "Xdebug Off" && tput sgr 0 && echo
     user: root
