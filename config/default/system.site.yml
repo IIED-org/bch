@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: HlN7eAN2N4JIHsYv56V4E7sqC9bS609KwvGFjyD_mgk
+langcode: en
+uuid: d63cdf30-d76e-4dd5-9655-63183bfb0052
+name: 'Biocultural Heritage'
+mail: webmaster@iied.org
+slogan: ''
+page:
+  403: /user/login
+  404: ''
+  front: /node/2
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: null
