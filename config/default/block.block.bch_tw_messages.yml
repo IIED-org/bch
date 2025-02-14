@@ -1,0 +1,22 @@
+uuid: a874d49e-f20a-4d43-b52b-272da358ea89
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bch_tw
+_core:
+  default_config_hash: 5ra2HNIksWbp6AhPpTufTGSlgx2FR7RR_ssxdjgFg4I
+id: bch_tw_messages
+theme: bch_tw
+region: highlighted
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }
