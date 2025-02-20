@@ -1,14 +1,12 @@
-uuid: e47a6f62-4e72-433d-861b-62a1ad4a926b
+uuid: 14ae0d82-3754-4b59-ad0f-0cda8ffd78cc
 langcode: en
 status: true
 dependencies:
   config:
-    - filter.format.content_format
+    - filter.format.full_html
   module:
     - ckeditor5
-_core:
-  default_config_hash: qwkf8fM0BRjtexKpH3GhUROBbX7wsKZLW4i31gbA1Ss
-format: content_format
+format: full_html
 editor: ckeditor5
 settings:
   toolbar:
@@ -19,11 +17,10 @@ settings:
       - '|'
       - link
       - blockQuote
+      - code
       - bulletedList
       - numberedList
-      - undo
-      - redo
-      - removeFormat
+      - '|'
       - sourceEditing
   plugins:
     ckeditor5_heading:
@@ -39,11 +36,23 @@ settings:
         startIndex: true
       multiBlock: true
     ckeditor5_sourceEditing:
-      allowed_tags: {  }
+      allowed_tags:
+        - '<cite>'
+        - '<dl>'
+        - '<dt>'
+        - '<dd>'
+        - '<section>'
+        - '<a hreflang>'
+        - '<blockquote cite>'
+        - '<ul type>'
+        - '<ol type="1 A I">'
+        - '<h2 id="jump-*">'
+        - '<h3 id>'
+        - '<h4 id>'
+        - '<h5 id>'
+        - '<h6 id>'
     linkit_extension:
       linkit_enabled: true
       linkit_profile: default
-    media_media:
-      allow_view_mode_override: true
 image_upload:
   status: false

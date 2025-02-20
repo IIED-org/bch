@@ -2,14 +2,16 @@ uuid: 385e40e8-d840-41d2-b1d2-d642f7d6a8c7
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - bch_tw
 _core:
   default_config_hash: dY7_Wihz9ohfBPKP554_brUfc9nPaecShShmC_VTGRM
 id: bch_tw_page_title
 theme: bch_tw
-region: sidebar_first
-weight: -5
+region: content
+weight: -4
 provider: null
 plugin: page_title_block
 settings:
@@ -17,4 +19,8 @@ settings:
   label: 'Page title'
   label_display: '0'
   provider: core
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

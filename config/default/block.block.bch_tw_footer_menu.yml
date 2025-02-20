@@ -12,8 +12,8 @@ _core:
   default_config_hash: MC8XOKrs3rCERlWettoqU7VEy_VkW-z01IeUO7PBtvI
 id: bch_tw_footer_menu
 theme: bch_tw
-region: sidebar_first
-weight: 0
+region: footer
+weight: -4
 provider: null
 plugin: 'system_menu_block:footer'
 settings:
