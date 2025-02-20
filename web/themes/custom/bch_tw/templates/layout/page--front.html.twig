@@ -43,7 +43,8 @@
  */
 #}
 
-{# {{ attach_library('bch_tw/alpine') }} #}
+{{ attach_library('bch_tw/alpine') }}
+    
 <div class="px-0 mx-0 mt-4 sm:px-4 rounded-t-3xl bg-cyan-100 sm:mx-2 md:mx-4">
   <div class="container px-4 mx-auto transition sm:px-0">
     <header role="banner" x-data="{ open: false }">
@@ -69,13 +70,17 @@
   </div>
 </div>
 
+
+{# end header section #}
+
+
 <div class="h-px bg-linear-to-r from-orange-200 via-bc-coral-500 to-orange-200 "></div>
 
-<div class="container mx-auto layout-container">
-
-  {{ page.breadcrumb }}
-
-  {{ page.highlighted }}
+<div class="h-full px-0 mx-0 mb-6 overflow-hidden sm:px-4 rounded-b-3xl bg-cyan-100 sm:mx-2 md:mx-4">
+  <div class="container px-4 mx-auto sm:px-0 layout-container"> 
+    {{ page.highlighted }}
+  </div>
+</div>
 
   {{ page.help }}
 
@@ -86,22 +91,8 @@
       {{ page.content }}
     </div>{# /.layout-content #}
 
-    {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
-    {% endif %}
-
-    {% if page.sidebar_second %}
-      <aside class="layout-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
-      </aside>
-    {% endif %}
-
   </main>
 
-
-</div>{# /.layout-container #}
 
   {% if page.footer %}
     <footer role="contentinfo" class="px-0 mx-0 mt-4 sm:px-4 rounded-b-3xl sm:rounded-3xl bg-bc-sage-200 sm:mx-2 md:mx-4 min-h-56">

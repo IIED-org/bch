@@ -7,8 +7,12 @@
 @theme {
     --font-display: "Noto Serif", serif; 
     --font-body: "Noto Sans", sans-serif;
-    --bchorange-500: oklch(77% 0.1531 62.86);
-    --bchyellow-500: oklch(86% 0.1769 90.8); 
+    --color-bc-coral-500: oklch(67.05% 0.1838 30.37);
+    --color-bc-coral-300: oklch(77% 0.1531 62.86);
+    --color-bc-yellow-500: oklch(86% 0.1769 90.8); 
+    --color-bc-sage-200: oklch(93.89% 0.0257 94.74);
+    --color-bc-sage-100: oklch(95.93% 0.0025 165.07);
+    --cyan-light: oklch(93.42% 0.0223 203.69);
 }
 
 @layer base {
@@ -42,4 +46,8 @@
   .prose h6 {
     font-family: var(--font-display);
   }
+}
+
+.menu--main .menu-item--active-trail {
+    @apply border-bc-coral-500;
 }
