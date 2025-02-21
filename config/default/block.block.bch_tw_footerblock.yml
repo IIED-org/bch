@@ -1,0 +1,25 @@
+uuid: f6e6ca95-e8ab-460c-879b-8eec787d09b9
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:2f5a5649-6a32-465e-8803-44df11f02704'
+  module:
+    - block_content
+  theme:
+    - bch_tw
+id: bch_tw_footerblock
+theme: bch_tw
+region: footer
+weight: -5
+provider: null
+plugin: 'block_content:2f5a5649-6a32-465e-8803-44df11f02704'
+settings:
+  id: 'block_content:2f5a5649-6a32-465e-8803-44df11f02704'
+  label: 'Footer block'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

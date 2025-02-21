@@ -1,0 +1,8 @@
+uuid: b3743597-cbd4-4a09-a0ec-5db9c114501e
+langcode: en
+status: true
+dependencies: {  }
+id: tab_block
+label: 'Tab block'
+revision: false
+description: null
