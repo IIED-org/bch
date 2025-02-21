@@ -65,20 +65,25 @@
       </div>
       <div x-show="open" class="md:hidden">
       {{ page.primary_menu }}
+          <div class="whitespace-nowrap">
+              <a href="https://www.iied.org" aria-label="Visit IIED main site" class="items-center pb-2 mb-px text-gray-600 transition-colors md:flex hover:text-bc-coral-500">IIED main site
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5" stroke-linecap="round">
+                <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd" />
+              </svg>
+              </a>
+          </div>
       </div>
     </header>
   </div>
 </div>
-
-
+<div class="h-px bg-linear-to-r from-orange-200 via-bc-coral-500 to-orange-200 "></div>
 {# end header section #}
 
-
-<div class="h-px bg-linear-to-r from-orange-200 via-bc-coral-500 to-orange-200 "></div>
-
-<div class="h-full px-0 mx-0 mb-6 overflow-hidden sm:px-4 rounded-b-3xl bg-cyan-100 sm:mx-2 md:mx-4">
-  <div class="container px-4 mx-auto sm:px-0 layout-container"> 
-    {{ page.highlighted }}
+<div class="h-full mx-0 mb-6 overflow-hidden rounded-b-3xl bg-linear-to-t from-bc-sage-100 to-cyan-100 sm:mx-2 md:mx-4">
+  <div class="bg-[url(https://www.iied.org/sites/default/files/2025-02/bch-hero.svg)] bg-contain bg-bottom bg-no-repeat">
+    <div class="container px-4 mx-auto sm:px-0 layout-container"> 
+      {{ page.highlighted }}
+    </div>
   </div>
 </div>
 
@@ -95,8 +100,8 @@
 
 
   {% if page.footer %}
-    <footer role="contentinfo" class="px-0 mx-0 mt-4 sm:px-4 rounded-b-3xl sm:rounded-3xl bg-bc-sage-200 sm:mx-2 md:mx-4 min-h-56">
-    
+    <footer role="contentinfo" class="px-0 mx-0 mt-4 sm:px-4 rounded-b-3xl sm:rounded-3xl bg-bc-sage-100 sm:mx-2 md:mx-4 min-h-56">
+
       {{ page.footer }}
     </footer>
   {% endif %}

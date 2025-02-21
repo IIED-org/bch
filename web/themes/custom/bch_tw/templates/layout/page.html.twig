@@ -44,7 +44,7 @@
 #}
 
 {# {{ attach_library('bch_tw/alpine') }} #}
-<div class="px-0 mx-0 mt-4 sm:px-4 rounded-t-3xl bg-cyan-100 sm:mx-2 md:mx-4">
+<div class="px-0 mx-0 mt-4 sm:px-4 sm:mx-2 md:mx-4">
   <div class="container px-4 mx-auto transition sm:px-0">
     <header role="banner" x-data="{ open: false }">
       <div class="flex items-end h-16">
@@ -71,40 +71,43 @@
 
 <div class="h-px bg-linear-to-r from-orange-200 via-bc-coral-500 to-orange-200 "></div>
 
-<div class="container mx-auto layout-container">
+  <div class="layout-container">
 
-  {{ page.breadcrumb }}
+    {{ page.breadcrumb }}
 
-  {{ page.highlighted }}
+    {{ page.highlighted }}
 
-  {{ page.help }}
+    {{ page.help }}
 
-  <main role="main">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+    <main role="main">
+      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-    <div class="layout-content">
-      {{ page.content }}
-    </div>{# /.layout-content #}
-
-    {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
-    {% endif %}
-
-    {% if page.sidebar_second %}
-      <aside class="layout-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
-      </aside>
-    {% endif %}
-
-  </main>
+    <div class="sm:px-4 sm:mx-2 md:mx-4">
+      <div class="container px-4 mx-auto sm:px-0"> 
+          {{ page.content }}
+        </div>
+    </div>
 
 
-</div>{# /.layout-container #}
+      {% if page.sidebar_first %}
+        <aside class="layout-sidebar-first" role="complementary">
+          {{ page.sidebar_first }}
+        </aside>
+      {% endif %}
+
+      {% if page.sidebar_second %}
+        <aside class="layout-sidebar-second" role="complementary">
+          {{ page.sidebar_second }}
+        </aside>
+      {% endif %}
+
+    </main>
+
+  </div>{# /.layout-container #}
+
 
   {% if page.footer %}
-    <footer role="contentinfo" class="px-0 mx-0 mt-4 sm:px-4 rounded-b-3xl sm:rounded-3xl bg-bc-sage-200 sm:mx-2 md:mx-4 min-h-56">
+    <footer role="contentinfo" class="px-0 mx-0 mt-4 sm:px-4 rounded-b-3xl sm:rounded-3xl bg-bc-sage-100 sm:mx-2 md:mx-4 min-h-56">
     
       {{ page.footer }}
     </footer>
