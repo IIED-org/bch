@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.article.field_caption
     - field.field.node.article.field_paragraphs
     - field.field.node.article.field_standfirst
     - node.type.article
@@ -16,13 +15,6 @@ targetEntityType: node
 bundle: article
 mode: default
 content:
-  field_caption:
-    type: basic_string
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 102
-    region: content
   field_paragraphs:
     type: entity_reference_revisions_entity_view
     label: above
@@ -44,4 +36,5 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  published_at: true

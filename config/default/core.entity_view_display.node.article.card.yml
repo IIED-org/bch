@@ -4,7 +4,6 @@ status: false
 dependencies:
   config:
     - core.entity_view_mode.node.card
-    - field.field.node.article.field_caption
     - field.field.node.article.field_paragraphs
     - field.field.node.article.field_standfirst
     - node.type.article
@@ -19,15 +18,9 @@ id: node.article.card
 targetEntityType: node
 bundle: article
 mode: card
-content:
-  field_caption:
-    type: basic_string
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
-    region: content
+content: {  }
 hidden:
   field_paragraphs: true
   field_standfirst: true
   links: true
+  published_at: true

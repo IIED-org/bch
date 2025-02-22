@@ -21,7 +21,7 @@ content:
     region: content
   field_heading_id:
     type: string
-    label: visually_hidden
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
