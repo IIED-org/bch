@@ -68,40 +68,33 @@
     node.isSticky() ? 'node--sticky',
     not node.isPublished() ? 'node--unpublished',
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-    'prose',
-    'md:prose prose-lg',
+    'container',
+    'mx-auto'
   ]
 %}
 {{ attach_library('bch_tw/node') }}
-  
-<div class="container p-6 px-4 mx-auto"><a href="/">Home</a>   /   <a href="/resources">Resources</a></div>
 
-<div class="container p-6 px-4 mx-auto rounded-3xl bg-bc-sage-50">
-
-  <article{{ attributes.addClass(classes) }}>
-
-    {# {{ title_prefix }}
-    {% if label and not page %}
-      <h2{{ title_attributes }}>
-        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-      </h2>
-    {% endif %}
-    {{ title_suffix }} #}
-
-    {# {% if display_submitted %}
-      <footer class="node__meta">
-        {{ author_picture }}
-        <div{{ author_attributes.addClass('node__submitted') }}>
-          {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-          {{ metadata }}
-        </div>
-      </footer>
-    {% endif %} #}
-
-    <div{{ content_attributes.addClass('node__content') }}>
-    <h1 class="mb-6 text-4xl">{{ node.label }}</h1>
-      {{ content }}
+<article{{ attributes.addClass(classes) }}>
+  <div class="grid grid-cols-1 gap-4 lg:grid-cols-4">
+    
+    <aside class="col-span-1">
+      <!-- Table of contents -->
+      <nav>
+        <ul>
+          <li><a href="#section1">Section 1</a></li>
+          <li><a href="#section2">Section 2</a></li>
+          <li><a href="#section3">Section 3</a></li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <div class="col-span-1 lg:col-span-3">
+      <h1>{{ node.label }}</h1>
+      <div{{ content_attributes.addClass('node__content') }}>
+        <div class="prose prose-lg">{{ content.field_standfirst }}</div>
+        {{ content.field_paragraphs}}
+      </div>
     </div>
-
-  </article>
-</div>
+    
+  </div>
+</article>
