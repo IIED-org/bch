@@ -1,0 +1,82 @@
+uuid: efdb4be7-e188-4620-b35c-1ef078676610
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.small_card
+    - field.field.node.resource.field_author
+    - field.field.node.resource.field_caption
+    - field.field.node.resource.field_content
+    - field.field.node.resource.field_document
+    - field.field.node.resource.field_external_link
+    - field.field.node.resource.field_paragraphs
+    - field.field.node.resource.field_resource_type
+    - field.field.node.resource.field_source
+    - node.type.resource
+  module:
+    - layout_builder
+    - link
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.resource.small_card
+targetEntityType: node
+bundle: resource
+mode: small_card
+content:
+  field_caption:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_document:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_external_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  published_at:
+    type: timestamp
+    label: hidden
+    settings:
+      date_format: olivero_medium
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: olivero_medium
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+        description: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  field_author: true
+  field_content: true
+  field_paragraphs: true
+  field_resource_type: true
+  field_source: true
+  links: true

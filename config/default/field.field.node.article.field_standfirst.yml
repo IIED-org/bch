@@ -1,0 +1,24 @@
+uuid: a478b0c2-af0c-4989-8037-73015af423e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_standfirst
+    - filter.format.content_format
+    - node.type.article
+  module:
+    - text
+id: node.article.field_standfirst
+field_name: field_standfirst
+entity_type: node
+bundle: article
+label: Standfirst
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - content_format
+field_type: text_long

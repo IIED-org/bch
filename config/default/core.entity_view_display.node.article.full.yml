@@ -1,0 +1,53 @@
+uuid: 5f378c69-3e31-4602-afda-9e4baa9805de
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.article.field_caption
+    - field.field.node.article.field_paragraphs
+    - field.field.node.article.field_standfirst
+    - node.type.article
+  module:
+    - entity_reference_revisions
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.article.full
+targetEntityType: node
+bundle: article
+mode: full
+content:
+  field_caption:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_standfirst:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

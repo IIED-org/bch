@@ -1,0 +1,19 @@
+uuid: 75001422-0026-401d-80b3-b26e057d3ad0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_source
+    - node.type.resource
+id: node.resource.field_source
+field_name: field_source
+entity_type: node
+bundle: resource
+label: Source
+description: 'Short text, shows on card'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

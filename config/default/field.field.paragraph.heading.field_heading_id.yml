@@ -1,0 +1,19 @@
+uuid: 8515336e-7d65-44e2-a369-7e432da6826b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading_id
+    - paragraphs.paragraphs_type.heading
+id: paragraph.heading.field_heading_id
+field_name: field_heading_id
+entity_type: paragraph
+bundle: heading
+label: 'Heading ID'
+description: 'Use for TOC anchor. NO spaces. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,90 @@
+uuid: e539f09c-c407-4d21-b23e-307ee02444c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.resource.field_author
+    - field.field.node.resource.field_caption
+    - field.field.node.resource.field_content
+    - field.field.node.resource.field_document
+    - field.field.node.resource.field_external_link
+    - field.field.node.resource.field_paragraphs
+    - field.field.node.resource.field_resource_type
+    - field.field.node.resource.field_source
+    - node.type.resource
+  module:
+    - link
+    - user
+id: node.resource.card
+targetEntityType: node
+bundle: resource
+mode: card
+content:
+  field_caption:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_document:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_external_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_resource_type:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_source:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  published_at:
+    type: timestamp
+    label: hidden
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  field_author: true
+  field_content: true
+  field_paragraphs: true
+  links: true

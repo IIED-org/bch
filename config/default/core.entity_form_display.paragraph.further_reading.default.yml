@@ -1,0 +1,25 @@
+uuid: 3ceb24f0-ce04-42cc-a14d-cd23ce33d36a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.further_reading.field_resource
+    - paragraphs.paragraphs_type.further_reading
+id: paragraph.further_reading.default
+targetEntityType: paragraph
+bundle: further_reading
+mode: default
+content:
+  field_resource:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

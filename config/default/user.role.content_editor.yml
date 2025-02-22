@@ -19,6 +19,7 @@ dependencies:
     - navigation
     - node
     - path
+    - publication_date
     - redirect
     - scheduler
     - system
@@ -59,6 +60,7 @@ permissions:
   - 'edit any svg_image media'
   - 'revert all revisions'
   - 'schedule publishing of nodes'
+  - 'set any published on date'
   - 'use basic_editorial transition create_new_draft'
   - 'use basic_editorial transition publish'
   - 'use basic_editorial transition unpublish'

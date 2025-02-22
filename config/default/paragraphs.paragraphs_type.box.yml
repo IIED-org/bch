@@ -1,0 +1,10 @@
+uuid: 509ac36c-02db-4db8-9843-533b5f87fecc
+langcode: en
+status: true
+dependencies: {  }
+id: box
+label: Box
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
