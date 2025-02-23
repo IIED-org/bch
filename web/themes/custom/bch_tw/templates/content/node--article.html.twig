@@ -75,23 +75,33 @@
 {{ attach_library('bch_tw/node') }}
 
 <article{{ attributes.addClass(classes) }}>
+
+
   <div class="grid grid-cols-1 gap-4 lg:grid-cols-4">
-    
     <aside class="col-span-1">
-      <!-- Table of contents -->
-      <nav>
-        <ul>
-          <li><a href="#section1">Section 1</a></li>
-          <li><a href="#section2">Section 2</a></li>
-          <li><a href="#section3">Section 3</a></li>
-        </ul>
-      </nav>
+
+      <div x-data="{ open: false }" class="mb-6 border rounded md:border-0">
+          <button @click="open = !open" class="">
+            <span x-show="!open" class="mr-2">Show</span>
+            <span x-show="open" class="mr-2">Hide</span>
+          </button>
+
+        <!-- Table of contents -->
+        <h3>On this page</h3>
+        <div x-show="open" x-transition class="">
+          <nav>
+            {{ content.field_table_of_contents }}
+          </nav>
+        </div>
+      </div>
+
     </aside>
     
     <div class="col-span-1 lg:col-span-3">
-      <h1>{{ node.label }}</h1>
+      <h1 class="page-title">{{ node.label }}</h1>
       <div{{ content_attributes.addClass('node__content') }}>
-        <div class="prose prose-lg">{{ content.field_standfirst }}</div>
+        <div class="prose prose-lg">{{ content.field_standfirst }}
+        </div>
         {{ content.field_paragraphs}}
       </div>
     </div>

@@ -44,7 +44,8 @@
     'lg:prose-lg'
   ]
 %}
-
 <div{{ attributes.addClass(classes) }}>
-  <h2 id="{{ content.field_heading_id['#items'].0.value }}">{{ content.field_heading }}</h2>
+  <ul>
+    <li><a href="#{{ content.field_heading_id['#items'].0.value }}">{{ content.field_heading }}</a></li>
+  </ul>  
 </div>

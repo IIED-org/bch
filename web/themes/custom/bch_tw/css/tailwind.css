@@ -85,3 +85,7 @@
 .menu--main .menu-item--active-trail {
     @apply border-bc-coral-500;
 }
+
+.page-title {
+    @apply text-3xl sm:text-4xl lg:text-5xl xl:text-6xl tracking-tight text-bc-coral-500;
+  }
