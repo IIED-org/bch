@@ -1,0 +1,10 @@
+uuid: d2434ccb-291a-4d62-9374-532d85cd71ce
+langcode: en
+status: true
+dependencies: {  }
+id: toc_heading
+label: 'TOC heading'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

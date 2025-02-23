@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.article.field_paragraphs
     - field.field.node.article.field_standfirst
+    - field.field.node.article.field_table_of_contents
     - node.type.article
   module:
     - entity_reference_revisions
@@ -30,6 +31,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 101
+    region: content
+  field_table_of_contents:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 104
     region: content
   links:
     settings: {  }
