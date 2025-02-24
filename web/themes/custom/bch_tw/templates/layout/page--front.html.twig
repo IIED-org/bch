@@ -89,15 +89,13 @@
 
   {{ page.help }}
 
-  <main role="main">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-
+  {# <main role="main">
+    <a id="main-content" tabindex="-1"></a>
     <div class="layout-content">
       {{ page.content }}
-    </div>{# /.layout-content #}
-
-  </main>
-
+    </div>
+  </main> #}
+  {{ page.content }}
 
   {% if page.footer %}
     <footer role="contentinfo" class="px-0 mx-0 mt-4 sm:px-4 rounded-b-3xl sm:rounded-3xl bg-bc-sage-100 sm:mx-2 md:mx-4 min-h-56">

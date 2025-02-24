@@ -69,7 +69,7 @@
     not node.isPublished() ? 'node--unpublished',
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
     'container',
-    'mx-auto'
+    'mx-auto',
   ]
 %}
 {{ attach_library('bch_tw/node') }}
@@ -78,16 +78,18 @@
 
 
   <div class="grid grid-cols-1 gap-4 lg:grid-cols-4">
-    <aside class="col-span-1">
+    <aside class="col-span-1 py-12">
+        <div class="w-24 h-2 md:bg-bc-coral-500"></div>
 
-      <div x-data="{ open: false }" class="mb-6 border rounded md:border-0">
+
+      <div x-data="{ open: false }" class="mb-6 border border-bc-coral-500 rounded-xl md:border-0">
           <button @click="open = !open" class="">
             <span x-show="!open" class="mr-2">Show</span>
             <span x-show="open" class="mr-2">Hide</span>
           </button>
 
         <!-- Table of contents -->
-        <h3>On this page</h3>
+        <h3 class="mb-6 text-2xl">On this page</h3>
         <div x-show="open" x-transition class="">
           <nav>
             {{ content.field_table_of_contents }}
@@ -95,6 +97,8 @@
         </div>
       </div>
 
+
+       <div class="w-24 h-2 md:bg-bc-coral-500"></div>
     </aside>
     
     <div class="col-span-1 lg:col-span-3">

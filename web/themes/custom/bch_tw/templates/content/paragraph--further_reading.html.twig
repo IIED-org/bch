@@ -48,12 +48,27 @@
     'lg:prose-lg',
     'mb-6',
     'lg:mb-12',
+    'border',
+    'border-bc-coral-300',
+    'p-4',
+    'box',
+    'first:pt-0',
+    'rounded-2xl',
   ]
 %}
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
-    {% block content %}
-      {{ content }}
-    {% endblock %}
+
+    <div x-data="{ open: false, maxLength: 20, fullText: '', slicedText: '' }"
+        x-init="fullText = $el.firstElementChild.textContent.trim(); slicedText = fullText.slice(0, maxLength)" >
+        <div x-text="open ? fullText : slicedText" x-transition>
+
+            <h3 class="mb-6">Further reading</h3>
+              <div class="not-prose">{{ content }}</div>
+
+      </div>
+      <button @click="open = true; event.target.style.display='none';" x-text="'Show more'"></button>
+  </div>
+
   </div>
 {% endblock paragraph %}

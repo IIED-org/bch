@@ -31,15 +31,16 @@
     'block',
     'block-' ~ configuration.provider|clean_class,
     'block-' ~ plugin_id|clean_class,
-    'bg-bc-sage-100',
+    'border',
+    'border-bc-coral-500',
     'rounded-3xl',
+    'py-12',
     'px-0',
     'mx-0',
     'mt-4',
     'sm:px-4',
     'sm:mx-2', 
     'md:mx-4',
-    'py-12',
     'mb-6'
   ]
 %}
@@ -50,6 +51,6 @@
   {% endif %}
   {{ title_suffix }}
   {% block content %}
-    {{ content }}
+    <div class="container mx-auto">{{ content }}</div>
   {% endblock %}
 </div>

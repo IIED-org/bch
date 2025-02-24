@@ -89,3 +89,23 @@
 .page-title {
     @apply text-3xl sm:text-4xl lg:text-5xl xl:text-6xl tracking-tight text-bc-coral-500;
   }
+
+.media--type-remote-video iframe.media-oembed-content {
+    @apply aspect-video rounded-2xl;
+}
+
+.media--view-mode-_6-9-large img {
+ @apply rounded-2xl;
+}
+
+.views-view-responsive-grid__item-inner {
+    @apply h-full;
+}
+
+.horizontal-tab-button {
+    @apply bg-white hover:bg-bc-yellow-500 px-12 py-6 rounded-full ;
+}
+
+.horizontal-tab-button.selected {
+    @apply bg-bc-yellow-500;
+}
