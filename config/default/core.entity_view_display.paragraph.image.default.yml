@@ -4,7 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.image.field_image
+    - field.field.paragraph.image.field_media_caption
     - paragraphs.paragraphs_type.image
+  module:
+    - text
 id: paragraph.image.default
 targetEntityType: paragraph
 bundle: image
@@ -18,5 +21,12 @@ content:
       link: false
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_media_caption:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
     region: content
 hidden: {  }

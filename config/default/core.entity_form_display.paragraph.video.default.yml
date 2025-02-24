@@ -3,15 +3,25 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.video.field_media_caption
     - field.field.paragraph.video.field_video
     - paragraphs.paragraphs_type.video
   module:
     - media_library
+    - text
 id: paragraph.video.default
 targetEntityType: paragraph
 bundle: video
 mode: default
 content:
+  field_media_caption:
+    type: text_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_video:
     type: media_library_widget
     weight: 0

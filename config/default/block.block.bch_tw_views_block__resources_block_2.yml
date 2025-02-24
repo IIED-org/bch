@@ -1,0 +1,29 @@
+uuid: f07a227d-5503-49c3-a99e-742d35f3bac9
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.resources
+  module:
+    - system
+    - views
+  theme:
+    - bch_tw
+id: bch_tw_views_block__resources_block_2
+theme: bch_tw
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:resources-block_2'
+settings:
+  id: 'views_block:resources-block_2'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

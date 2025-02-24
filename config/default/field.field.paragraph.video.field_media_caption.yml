@@ -1,0 +1,22 @@
+uuid: 05fd602c-ab96-4cf1-bf51-f69cf1ea009a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_caption
+    - paragraphs.paragraphs_type.video
+  module:
+    - text
+id: paragraph.video.field_media_caption
+field_name: field_media_caption
+entity_type: paragraph
+bundle: video
+label: 'Media caption'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text
