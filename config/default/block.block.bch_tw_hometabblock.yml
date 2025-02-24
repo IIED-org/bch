@@ -1,0 +1,30 @@
+uuid: 415f8b93-e516-4d05-a63d-1a1ff5824d6c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:tab_block:abd055a3-662f-4613-920d-f0fc12f055b0'
+  module:
+    - block_content
+    - system
+  theme:
+    - bch_tw
+id: bch_tw_hometabblock
+theme: bch_tw
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:abd055a3-662f-4613-920d-f0fc12f055b0'
+settings:
+  id: 'block_content:abd055a3-662f-4613-920d-f0fc12f055b0'
+  label: 'Home tab block'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

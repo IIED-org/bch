@@ -1,0 +1,26 @@
+uuid: 697f8d85-2eda-440d-ad25-89384321ac84
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - filter.format.content_format
+    - filter.format.full_html
+    - node.type.resource
+  module:
+    - text
+id: node.resource.field_content
+field_name: field_content
+entity_type: node
+bundle: resource
+label: Content
+description: 'The content of this page.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - content_format
+    - full_html
+field_type: text_long

@@ -1,0 +1,32 @@
+uuid: b9231482-5fc4-4f1e-ae77-4cfc51f30f92
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.toc_heading.field_heading
+    - field.field.paragraph.toc_heading.field_heading_id
+    - paragraphs.paragraphs_type.toc_heading
+id: paragraph.toc_heading.default
+targetEntityType: paragraph
+bundle: toc_heading
+mode: default
+content:
+  field_heading:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_heading_id:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,24 @@
+uuid: 7d84f57c-93e7-47a3-9523-b82332fa81e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_caption
+    - filter.format.content_format
+    - media.type.remote_video
+  module:
+    - text
+id: media.remote_video.field_caption
+field_name: field_caption
+entity_type: media
+bundle: remote_video
+label: Caption
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - content_format
+field_type: text_long

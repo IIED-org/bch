@@ -1,0 +1,30 @@
+uuid: 71607420-6bb4-4710-84e1-b71983bfcef0
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:a0803088-0d64-425a-8897-147f2206f75e'
+  module:
+    - block_content
+    - system
+  theme:
+    - bch_tw
+id: bch_tw_homehero
+theme: bch_tw
+region: highlighted
+weight: 0
+provider: null
+plugin: 'block_content:a0803088-0d64-425a-8897-147f2206f75e'
+settings:
+  id: 'block_content:a0803088-0d64-425a-8897-147f2206f75e'
+  label: 'Home hero'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

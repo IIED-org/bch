@@ -1,0 +1,49 @@
+uuid: c23abc31-7591-4244-8683-1fab7a13afe2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_table_of_contents
+    - node.type.article
+    - paragraphs.paragraphs_type.toc_heading
+  module:
+    - entity_reference_revisions
+id: node.article.field_table_of_contents
+field_name: field_table_of_contents
+entity_type: node
+bundle: article
+label: 'Table of contents'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      toc_heading: toc_heading
+    negate: 0
+    target_bundles_drag_drop:
+      box:
+        weight: 7
+        enabled: false
+      further_reading:
+        weight: 8
+        enabled: false
+      heading:
+        weight: 9
+        enabled: false
+      image:
+        weight: 10
+        enabled: false
+      text:
+        weight: 11
+        enabled: false
+      toc_heading:
+        weight: 13
+        enabled: true
+      video:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

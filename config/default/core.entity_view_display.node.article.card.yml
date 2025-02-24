@@ -1,0 +1,28 @@
+uuid: 17b35afe-5278-470a-af24-78171bdbd528
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.article.field_paragraphs
+    - field.field.node.article.field_standfirst
+    - field.field.node.article.field_table_of_contents
+    - node.type.article
+  module:
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.article.card
+targetEntityType: node
+bundle: article
+mode: card
+content: {  }
+hidden:
+  field_paragraphs: true
+  field_standfirst: true
+  field_table_of_contents: true
+  links: true
+  published_at: true

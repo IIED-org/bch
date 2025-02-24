@@ -8,6 +8,7 @@ module:
   autosave_form: 0
   big_pipe: 0
   block: 0
+  block_content: 0
   bpmn_io: 0
   breakpoint: 0
   captcha: 0
@@ -35,7 +36,9 @@ module:
   eca_ui: 0
   eca_user: 0
   editor: 0
+  entity_reference_revisions: 0
   field: 0
+  field_group: 0
   field_ui: 0
   file: 0
   filter: 0
@@ -68,9 +71,11 @@ module:
   path: 0
   path_alias: 0
   project_browser: 0
+  rabbit_hole: 0
   redirect: 0
   redirect_404: 0
   responsive_image: 0
+  rh_taxonomy: 0
   sam: 0
   scheduler: 0
   scheduler_content_moderation_integration: 0
@@ -89,9 +94,13 @@ module:
   eca_form: 1
   pathauto: 1
   views: 10
+  paragraphs: 11
+  publication_date: 99
 theme:
   claro: 0
   gin: 0
   olivero: 0
   easy_email_theme: 0
   drupal_cms_olivero: 0
+  stable9: 0
+  bch_tw: 0

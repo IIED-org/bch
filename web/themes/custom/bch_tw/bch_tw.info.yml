@@ -1,0 +1,22 @@
+name: bch_tw
+type: theme
+'base theme': stable9
+version: 1.0.0
+libraries:
+  - bch_tw/base
+  - bch_tw/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - bch_tw/user
+  core/drupal.dropbutton:
+    - bch_tw/dropbutton
+  core/drupal.dialog:
+    - bch_tw/dialog
+  file/drupal.file:
+    - bch_tw/file
+  core/drupal.progress:
+    - bch_tw/progress
+description: ''
+core_version_requirement: ^11
+generator: 'starterkit_theme:11.1.2'

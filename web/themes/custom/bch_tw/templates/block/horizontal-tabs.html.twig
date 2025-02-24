@@ -1,0 +1,18 @@
+{#
+/**
+ * @file
+ * Default theme implementation for horizontal tabs.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The rendered children.
+ *
+ * @see template_preprocess_horizontal_tabs()
+ *
+ * @ingroup themeable
+ */
+#}
+<div data-horizontal-tabs class="container clearfix mx-auto">
+  <ul data-horizontal-tabs-list class="flex flex-col mb-6 space-x-4 md:flex-row visually-hidden"></ul>
+  <div data-horizontal-tabs-panes{{ attributes }} class="p-4 prose bg-white rounded-3xl md:p-6">{{ children }}</div>
+</div>

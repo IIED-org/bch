@@ -1,0 +1,19 @@
+uuid: f575ddbf-640d-41c0-97dc-d74f9a6539d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_author
+    - node.type.resource
+id: node.resource.field_author
+field_name: field_author
+entity_type: node
+bundle: resource
+label: Author
+description: 'Optional author credit'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

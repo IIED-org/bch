@@ -1,0 +1,111 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Serif:ital,wght@400,700&display=swap');
+
+
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@400,700&display=swap') format('woff2'),
+       local('Noto Serif'),
+       local('serif');
+  font-display: swap; 
+}
+
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: italic;
+  font-weight: 700;
+  src: url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@400,700&display=swap') format('woff2'),
+       local('Noto Serif Italic'),
+       local('italic');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Serif:ital,wght@400,700&display=swap') format('woff2'),
+       local('Noto Sans'),
+       local('sans-serif');
+  font-display: swap;
+}
+
+
+@theme {
+    --font-display: "Noto Serif", serif; 
+    --font-body: "Noto Sans", sans-serif;
+    --color-bc-coral-500: oklch(67.05% 0.1838 30.37);
+    --color-bc-coral-300: oklch(77% 0.1531 62.86);
+    --color-bc-yellow-500: oklch(86% 0.1769 90.8); 
+    --color-bc-sage-200: oklch(93.89% 0.0257 94.74);
+    --color-bc-sage-100: oklch(96.13% 0.0111 89.72);
+    --color-bc-sage-50: oklch(98.45% 0.0067 97.35);
+    --cyan-light: oklch(93.42% 0.0223 203.69);
+    --hero-background: url('/bch/web/themes/custom/bch_tw/images/icons/bch-hero.svg');
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+
+  p {
+    font-family: var(--font-body);
+  }
+}
+
+@layer components {
+    .typography {
+      color: var(--color-gray-950);
+      a {
+        color: var(--color-blue-500);
+        &:hover {
+            color: var(--color-blue-800);
+        }
+      }
+    }, 
+    .prose {
+        font-family: var(--font-body);
+    }
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4,
+  .prose h5,
+  .prose h6 {
+    font-family: var(--font-display);
+  }
+}
+
+.menu--main .menu-item--active-trail {
+    @apply border-bc-coral-500;
+}
+
+.page-title {
+    @apply text-3xl sm:text-4xl lg:text-5xl xl:text-6xl tracking-tight text-bc-coral-500;
+  }
+
+.media--type-remote-video iframe.media-oembed-content {
+    @apply aspect-video rounded-2xl;
+}
+
+.media--view-mode-_6-9-large img {
+ @apply rounded-2xl;
+}
+
+.views-view-responsive-grid__item-inner {
+    @apply h-full;
+}
+
+.horizontal-tab-button {
+    @apply bg-white hover:bg-bc-yellow-500 px-12 py-6 rounded-full ;
+}
+
+.horizontal-tab-button.selected {
+    @apply bg-bc-yellow-500;
+}

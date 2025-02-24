@@ -1,0 +1,26 @@
+uuid: fa653824-3bcc-4d3a-8614-6dfa10673aef
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bch_tw
+_core:
+  default_config_hash: G4iNGvy_k2yNIEH_FJmbkvgBBar1etJIhKJYuygT7hU
+id: bch_tw_content
+theme: bch_tw
+region: content
+weight: -3
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

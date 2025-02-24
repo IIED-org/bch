@@ -1,0 +1,29 @@
+uuid: 90ea1192-c819-4be5-8075-836cd819d94b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_resource
+    - node.type.resource
+    - paragraphs.paragraphs_type.further_reading
+id: paragraph.further_reading.field_resource
+field_name: field_resource
+entity_type: paragraph
+bundle: further_reading
+label: Resource
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      resource: resource
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

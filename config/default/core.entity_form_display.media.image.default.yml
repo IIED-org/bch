@@ -3,11 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.image.field_caption
     - field.field.media.image.field_media_image
     - image.style.media_library
     - media.type.image
   module:
     - focal_point
+    - text
 _core:
   default_config_hash: N2Imq6kLhAPzzFt_VZQCkWItt-UfqPOkcQlyC-3yTgM
 id: media.image.default
@@ -15,6 +17,14 @@ targetEntityType: media
 bundle: image
 mode: default
 content:
+  field_caption:
+    type: text_textarea
+    weight: 101
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
   field_media_image:
     type: image_focal_point
     weight: 1

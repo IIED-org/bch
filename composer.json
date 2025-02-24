@@ -33,7 +33,10 @@
         "drupal/drupal_cms_project": "~1.0.0",
         "drupal/drupal_cms_seo_tools": "~1.0.2",
         "drupal/drupal_cms_starter": "~1.0.2",
+        "drupal/paragraphs": "^1.18",
         "drupal/project_browser": "@alpha",
+        "drupal/publication_date": "^3.0",
+        "drupal/rabbit_hole": "^1.0",
         "drupal/webform": "@beta",
         "drush/drush": "^13"
     },

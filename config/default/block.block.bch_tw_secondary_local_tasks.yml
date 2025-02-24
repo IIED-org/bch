@@ -1,0 +1,22 @@
+uuid: 796dbee8-56a3-4066-8b1b-6c700341ba29
+langcode: en
+status: true
+dependencies:
+  theme:
+    - bch_tw
+_core:
+  default_config_hash: 3KAyDgB3FHENrBwroAUcCPvkfPHBMFcRDnsZFyFMuwc
+id: bch_tw_secondary_local_tasks
+theme: bch_tw
+region: highlighted
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }
