@@ -74,31 +74,48 @@
 %}
 {{ attach_library('bch_tw/node') }}
 
+{{ attach_library('bch_tw/smoothscroll') }}
+
+
 <article{{ attributes.addClass(classes) }}>
 
 
-  <div class="grid grid-cols-1 gap-4 lg:grid-cols-4">
-    <aside class="col-span-1 py-12">
-        <div class="w-24 h-2 md:bg-bc-coral-500"></div>
+  <div class="grid grid-cols-1 gap-4 py-12 lg:grid-cols-4">
+    <aside class="col-span-1">
+      <div class="sticky top-4 toc lg:my-6">
+          <div class="hidden w-24 h-2 mb-4 md:bg-bc-coral-300 rounded-2xl lg:flex"></div>
+
+        {# TOC #}
+        <div x-data="{ open: false }" class="mb-6 border border-bc-coral-500 rounded-2xl lg:border-0">
+          <div class="flex items-center justify-between px-4 py-2 lg:px-0 lg:py-2"> 
+            <h3 class="text-2xl lg:mb-4">On this page</h3>
 
 
-      <div x-data="{ open: false }" class="mb-6 border border-bc-coral-500 rounded-xl md:border-0">
-          <button @click="open = !open" class="">
-            <span x-show="!open" class="mr-2">Show</span>
-            <span x-show="open" class="mr-2">Hide</span>
-          </button>
+            <button @click="open = !open" class="lg:hidden">
+              <span x-show="!open">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+              </span>
+              <span x-show="open">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                </svg>
+              </span>
+            </button>
+          </div>
 
-        <!-- Table of contents -->
-        <h3 class="mb-6 text-2xl">On this page</h3>
-        <div x-show="open" x-transition class="">
-          <nav>
-            {{ content.field_table_of_contents }}
-          </nav>
+
+          <div :class="{'block': open, 'hidden': !open}" class="lg:block lg:space-y-2">
+            <nav>
+              {{ content.field_table_of_contents }}
+            </nav>
+          </div>
         </div>
+        {# End TOC  #}
+
+        <div class="hidden w-24 h-2 mt-4 md:bg-bc-coral-300 rounded-2xl lg:flex"></div>
       </div>
-
-
-       <div class="w-24 h-2 md:bg-bc-coral-500"></div>
     </aside>
     
     <div class="col-span-1 lg:col-span-3">

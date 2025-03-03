@@ -75,3 +75,6 @@ node_modules
 
 # Ignore drush aliases for now
 /drush/*
+
+# Dev mode: don't include tailwind.css 
+tailwind.css

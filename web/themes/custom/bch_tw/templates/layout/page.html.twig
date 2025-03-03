@@ -44,32 +44,36 @@
 #}
 
 {{ attach_library('bch_tw/alpine') }}
-<div class="sm:px-4 sm:mx-2 md:mx-4 px-0 mx-0 mt-4">
-  <div class="sm:px-0 container px-4 mx-auto transition">
+<div class="px-0 mx-0 mt-4 sm:px-4 sm:mx-2 md:mx-4">
+  <div class="container px-4 mx-auto transition sm:px-0">
     <header role="banner" x-data="{ open: false }">
       <div class="flex items-end h-16">
-      {{ page.header }}
-      {{ page.primary_menu }}
-      {# {{ page.secondary_menu }} #}
-      <div class="whitespace-nowrap ml-auto">
-       <a href="https://www.iied.org" aria-label="Visit IIED main site" class="md:flex hover:text-bc-coral-500 items-center pb-2 mb-px text-gray-600 transition-colors">IIED main site
-       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5" stroke-linecap="round">
-        <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd" />
-      </svg>
-       </a>
+        {{ page.header }}
+        {{ page.primary_menu }}
+        {# {{ page.secondary_menu }} #}
+        
+        <div class="ml-auto whitespace-nowrap">
+          <a href="https://www.iied.org" aria-label="Visit IIED main site" class="items-center pb-2 mb-px text-gray-600 transition-colors md:flex hover:text-bc-coral-500">IIED main site
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5" stroke-linecap="round">
+              <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
+        
+        <button class="md:hidden" aria-label="Toggle menu" @click="open = !open">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+        </button>
       </div>
-      <button class="md:hidden" aria-label="Toggle menu" @click="open = !open">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
-      </button>
-      </div>
+
       <div x-show="open" class="md:hidden">
       {{ page.primary_menu }}
       </div>
+
     </header>
   </div>
 </div>
 
-<div class="bg-linear-to-r from-orange-200 via-bc-coral-500 to-orange-200 h-px"></div>
+<div class="h-px bg-linear-to-r from-orange-200 via-bc-coral-500 to-orange-200"></div>
 
   <div class="layout-container">
 
@@ -83,7 +87,7 @@
       <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
     <div class="sm:px-4 sm:mx-2 md:mx-4">
-      <div class="sm:px-0 container px-4 mx-auto"> 
+      <div class="container px-4 mx-auto sm:px-0"> 
           {{ page.content }}
         </div>
     </div>
@@ -107,7 +111,7 @@
 
 
   {% if page.footer %}
-    <footer role="contentinfo" class="sm:px-4 rounded-b-3xl sm:rounded-3xl bg-bc-sage-100 sm:mx-2 md:mx-4 min-h-56 px-0 mx-0 mt-4">
+    <footer role="contentinfo" class="px-0 mx-0 my-4 sm:px-4 rounded-b-3xl sm:rounded-3xl bg-bc-sage-100 sm:mx-2 md:mx-4 min-h-56">
     
       {{ page.footer }}
     </footer>
