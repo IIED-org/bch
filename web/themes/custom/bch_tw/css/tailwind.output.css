@@ -552,12 +552,6 @@
   .top-4 {
     top: calc(var(--spacing) * 4);
   }
-  .top-9 {
-    top: calc(var(--spacing) * 9);
-  }
-  .top-12 {
-    top: calc(var(--spacing) * 12);
-  }
   .bottom-0 {
     bottom: calc(var(--spacing) * 0);
   }
@@ -1259,9 +1253,6 @@
   .-ml-px {
     margin-left: -1px;
   }
-  .ml-4 {
-    margin-left: calc(var(--spacing) * 4);
-  }
   .ml-auto {
     margin-left: auto;
   }
@@ -1429,6 +1420,9 @@
   .rounded-lg {
     border-radius: var(--radius-lg);
   }
+  .rounded-xl {
+    border-radius: var(--radius-xl);
+  }
   .rounded-t-3xl {
     border-top-left-radius: var(--radius-3xl);
     border-top-right-radius: var(--radius-3xl);
@@ -1556,11 +1550,11 @@
   .pb-4 {
     padding-bottom: calc(var(--spacing) * 4);
   }
-  .pb-12 {
-    padding-bottom: calc(var(--spacing) * 12);
-  }
   .pb-24 {
     padding-bottom: calc(var(--spacing) * 24);
+  }
+  .pl-2 {
+    padding-left: calc(var(--spacing) * 2);
   }
   .pl-4 {
     padding-left: calc(var(--spacing) * 4);
@@ -1625,6 +1619,12 @@
   }
   .text-neutral-500 {
     color: var(--color-neutral-500);
+  }
+  .text-neutral-700 {
+    color: var(--color-neutral-700);
+  }
+  .text-neutral-800 {
+    color: var(--color-neutral-800);
   }
   .opacity-0 {
     opacity: 0%;
@@ -1996,11 +1996,6 @@
       display: flex;
     }
   }
-  .md\:hidden {
-    @media (width >= 48rem) {
-      display: none;
-    }
-  }
   .md\:bg-bc-coral-300 {
     @media (width >= 48rem) {
       background-color: var(--color-bc-coral-300);
@@ -2035,16 +2030,6 @@
   .lg\:my-6 {
     @media (width >= 64rem) {
       margin-block: calc(var(--spacing) * 6);
-    }
-  }
-  .lg\:my-8 {
-    @media (width >= 64rem) {
-      margin-block: calc(var(--spacing) * 8);
-    }
-  }
-  .lg\:my-12 {
-    @media (width >= 64rem) {
-      margin-block: calc(var(--spacing) * 12);
     }
   }
   .lg\:prose-lg {
@@ -2336,6 +2321,12 @@
       padding-block: calc(var(--spacing) * 2);
     }
   }
+  .lg\:text-2xl {
+    @media (width >= 64rem) {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
+    }
+  }
   .lg\:text-3xl {
     @media (width >= 64rem) {
       font-size: var(--text-3xl);
@@ -2402,18 +2393,23 @@
 @layer components {
   .typography {
     color: var(--color-gray-950);
-    a {
-      color: var(--color-blue-500);
-      &:hover {
-        color: var(--color-blue-800);
-      }
-    }
   }
-  , .prose {
+  .prose {
     font-family: var(--font-body);
   }
   .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
     font-family: var(--font-display);
+  }
+}
+@layer utilities {
+  .prose a {
+    color: var(--color-blue-700);
+    &:hover {
+      color: var(--color-blue-800);
+    }
+    &:visited {
+      color: var(--color-blue-900);
+    }
   }
 }
 .menu--main .menu-item--active-trail {
@@ -2500,10 +2496,13 @@
     display: block;
   }
 }
-.toc .active {
+.toc nav a.active {
+  margin-left: -2px;
   border-left-style: var(--tw-border-style);
-  border-left-width: 4px;
+  border-left-width: 3px;
   border-color: var(--color-bc-coral-500);
+  --tw-font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-medium);
   color: var(--color-bc-coral-500);
 }
 @layer base {

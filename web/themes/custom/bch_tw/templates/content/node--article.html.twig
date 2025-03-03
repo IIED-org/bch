@@ -74,7 +74,7 @@
 %}
 {{ attach_library('bch_tw/node') }}
 
-{{ attach_library('bch_tw/smoothscroll') }}
+{{ attach_library('bch_tw/toc') }}
 
 
 <article{{ attributes.addClass(classes) }}>
@@ -83,12 +83,14 @@
   <div class="grid grid-cols-1 gap-4 py-12 lg:grid-cols-4">
     <aside class="col-span-1">
       <div class="sticky top-4 toc lg:my-6">
-          <div class="hidden w-24 h-2 mb-4 md:bg-bc-coral-300 rounded-2xl lg:flex"></div>
+
+          <div class="hidden w-24 h-2 mb-4 md:bg-bc-coral-300 rounded-2xl lg:flex">
+          </div>
 
         {# TOC #}
         <div x-data="{ open: false }" class="mb-6 border border-bc-coral-500 rounded-2xl lg:border-0">
           <div class="flex items-center justify-between px-4 py-2 lg:px-0 lg:py-2"> 
-            <h3 class="text-2xl lg:mb-4">On this page</h3>
+            <h3 class="text-xl lg:text-2xl lg:mb-4">On this page</h3>
 
 
             <button @click="open = !open" class="lg:hidden">
@@ -111,10 +113,13 @@
               {{ content.field_table_of_contents }}
             </nav>
           </div>
+          
         </div>
         {# End TOC  #}
 
-        <div class="hidden w-24 h-2 mt-4 md:bg-bc-coral-300 rounded-2xl lg:flex"></div>
+        <div class="hidden w-24 h-2 mt-4 md:bg-bc-coral-300 rounded-2xl lg:flex">
+        </div>
+
       </div>
     </aside>
     
@@ -127,5 +132,6 @@
       </div>
     </div>
     
+
   </div>
 </article>

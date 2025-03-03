@@ -46,11 +46,11 @@
 {{ attach_library('bch_tw/alpine') }}
 <div class="px-0 mx-0 mt-4 sm:px-4 sm:mx-2 md:mx-4">
   <div class="container px-4 mx-auto transition sm:px-0">
-    <header role="banner" x-data="{ open: false }">
+
+    <header role="banner">
       <div class="flex items-end h-16">
         {{ page.header }}
         {{ page.primary_menu }}
-        {# {{ page.secondary_menu }} #}
         
         <div class="ml-auto whitespace-nowrap">
           <a href="https://www.iied.org" aria-label="Visit IIED main site" class="items-center pb-2 mb-px text-gray-600 transition-colors md:flex hover:text-bc-coral-500">IIED main site
@@ -60,13 +60,6 @@
           </a>
         </div>
         
-        <button class="md:hidden" aria-label="Toggle menu" @click="open = !open">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
-        </button>
-      </div>
-
-      <div x-show="open" class="md:hidden">
-      {{ page.primary_menu }}
       </div>
 
     </header>
@@ -84,30 +77,30 @@
     {{ page.help }}
 
     <main role="main">
-      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+      <a id="main-content" tabindex="-1"></a>
 
-    <div class="sm:px-4 sm:mx-2 md:mx-4">
-      <div class="container px-4 mx-auto sm:px-0"> 
-          {{ page.content }}
+        <div class="sm:px-4 sm:mx-2 md:mx-4">
+          <div class="container px-4 mx-auto sm:px-0"> 
+              {{ page.content }}
+            </div>
         </div>
-    </div>
 
 
-      {% if page.sidebar_first %}
-        <aside class="layout-sidebar-first" role="complementary">
-          {{ page.sidebar_first }}
-        </aside>
-      {% endif %}
+          {% if page.sidebar_first %}
+            <aside class="layout-sidebar-first" role="complementary">
+              {{ page.sidebar_first }}
+            </aside>
+          {% endif %}
 
-      {% if page.sidebar_second %}
-        <aside class="layout-sidebar-second" role="complementary">
-          {{ page.sidebar_second }}
-        </aside>
-      {% endif %}
+          {% if page.sidebar_second %}
+            <aside class="layout-sidebar-second" role="complementary">
+              {{ page.sidebar_second }}
+            </aside>
+          {% endif %}
 
     </main>
 
-  </div>{# /.layout-container #}
+  </div>
 
 
   {% if page.footer %}
