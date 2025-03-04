@@ -111,3 +111,6 @@ alpine:
 toc:
    js:
     js/toc.js: { }
+clickdimensions:
+  js:
+    https://cdn-eu.clickdimensions.com/web/v10/CDWidget.js: { type: external, attributes: { defer: true } }

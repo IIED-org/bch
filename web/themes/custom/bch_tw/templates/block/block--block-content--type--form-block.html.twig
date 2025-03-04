@@ -1,0 +1,36 @@
+{#
+/**
+Sign up form block
+ */
+#}
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+<section class="bg-[url(/sites/default/files/2025-03/peru-amaranth-in-the-potato-park.jpg)] bg-cover bg-right-bottom bg-no-repeat rounded-3xl py-12 px-0 mx-0 mt-4 sm:px-4 sm:mx-2 md:mx-4 mb-4">
+
+  {{ attach_library('bch_tw/clickdimensions') }}
+  <script type="text/javascript">var loc = "https://analytics-eu.clickdimensions.com/iiedorg-asnkj/pages/";</script>
+
+
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% block content %}
+  <div class="container px-4 mx-auto sm:px-0">
+    <div class="p-4 max-w-prose md:p-6 rounded-3xl bg-bc-sage-100 ">
+      {{ content.body }}
+    </div>
+  </div>
+  {% endblock %}
+
+</div>
+
+</section>
