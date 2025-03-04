@@ -1,0 +1,8 @@
+uuid: fdaec12d-1248-4f94-9de3-8d1820cabf7f
+langcode: en
+status: true
+dependencies: {  }
+id: form_block
+label: 'Form block'
+revision: false
+description: 'For sign up form'

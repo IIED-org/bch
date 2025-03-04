@@ -6,6 +6,7 @@ module:
   automatic_updates: 0
   automatic_updates_extensions: 0
   autosave_form: 0
+  better_exposed_filters: 0
   big_pipe: 0
   block: 0
   block_content: 0
@@ -75,6 +76,7 @@ module:
   redirect: 0
   redirect_404: 0
   responsive_image: 0
+  rh_node: 0
   rh_taxonomy: 0
   sam: 0
   scheduler: 0
@@ -87,6 +89,7 @@ module:
   token: 0
   toolbar: 0
   trash: 0
+  twig_tweak: 0
   update: 0
   user: 0
   views_ui: 0
