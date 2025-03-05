@@ -12,7 +12,7 @@ dependencies:
 id: bch_tw_views_block__resources_block_2
 theme: bch_tw
 region: content
-weight: 0
+weight: -4
 provider: null
 plugin: 'views_block:resources-block_2'
 settings:

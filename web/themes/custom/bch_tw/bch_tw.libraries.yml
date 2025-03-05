@@ -108,3 +108,9 @@ user:
 alpine:
   js:
     https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js: { type: external, minified: true, attributes: { defer: true } }
+toc:
+   js:
+    js/toc.js: { }
+clickdimensions:
+  js:
+    https://cdn-eu.clickdimensions.com/web/v10/CDWidget.js: { type: external, attributes: { defer: true } }

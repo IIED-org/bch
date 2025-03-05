@@ -44,7 +44,7 @@
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
-  <ul class="pl-4 border-l border-neutral-200">
-    <li class="py-2 text-lg transition-color hover:text-bc-coral-500"><a href="#{{ content.field_heading_id['#items'].0.value }}">{{ content.field_heading }}</a></li>
+  <ul class="border-l border-neutral-200">
+    <li class="py-2 text-lg transition-color hover:text-bc-coral-500"><a href="#{{ content.field_heading_id['#items'].0.value }}" class="pl-2 -ml-px">{{ content.field_heading.0 }}</a></li>
   </ul>  
 </div>

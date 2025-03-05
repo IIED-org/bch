@@ -30,7 +30,7 @@
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <ul{{ attributes.addClass('menu flex items-end justify-center md:mr-auto md:ml-4 md:pl-4 whitespace-nowrap') }}>
+      <ul{{ attributes.addClass('menu') }}>
     {% else %}
       <ul class="menu">
     {% endif %}
@@ -40,18 +40,7 @@
           item.is_expanded ? 'menu-item--expanded',
           item.is_collapsed ? 'menu-item--collapsed',
           item.in_active_trail ? 'menu-item--active-trail',
-          'mx-6', 
-          'text-gray-900',
-          'hover:text-coral-500', 
-          'text-lg', 
-          'border-b-2', 
-          'border-transparent',
-          'hover:border-bc-coral-500',
-          'visited:text-gray-900', 
-          'h-full',
-          'transition-colors',
-          'duration-300', 
-          'pb-1'
+          'menu-item',
         ]
       %}
       <li{{ item.attributes.addClass(classes) }}>

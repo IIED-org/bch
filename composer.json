@@ -37,6 +37,7 @@
         "drupal/project_browser": "@alpha",
         "drupal/publication_date": "^3.0",
         "drupal/rabbit_hole": "^1.0",
+        "drupal/twig_tweak": "^3.4",
         "drupal/webform": "@beta",
         "drush/drush": "^13"
     },

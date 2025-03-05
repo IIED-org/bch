@@ -62,16 +62,12 @@
 @layer components {
     .typography {
       color: var(--color-gray-950);
-      a {
-        color: var(--color-blue-500);
-        &:hover {
-            color: var(--color-blue-800);
-        }
-      }
-    }, 
+    }
+
     .prose {
         font-family: var(--font-body);
     }
+
   .prose h1,
   .prose h2,
   .prose h3,
@@ -82,9 +78,20 @@
   }
 }
 
-.menu--main .menu-item--active-trail {
-    @apply border-bc-coral-500;
+@layer utilities {
+
+  .prose a {
+    color: var(--color-blue-700);
+    &:hover {
+        color: var(--color-blue-800);
+    }
+    &:visited {
+        color: var(--color-blue-900);
+    }
+  }
 }
+
+
 
 .page-title {
     @apply text-3xl sm:text-4xl lg:text-5xl xl:text-6xl tracking-tight text-bc-coral-500;
@@ -103,9 +110,74 @@
 }
 
 .horizontal-tab-button {
-    @apply bg-white hover:bg-bc-yellow-500 px-12 py-6 rounded-full ;
+    @apply bg-white hover:bg-bc-yellow-500 rounded-full max-w-md mb-3 transition-colors duration-300 ease-in-out shadow-sm;
+}
+    .horizontal-tab-button.selected {
+        @apply bg-bc-yellow-500 mb-3 border-0;
+    }
+
+    .horizontal-tab-button a {
+        @apply w-full px-6 xl:px-12 py-6 block whitespace-nowrap text-center;
+    }
+
+    /* Temp fix shouldn't be needed */
+.xl\:flex {
+    @media (width >= 80rem) {
+      display: flex;
+    }
+  }
+
+.lg\:flex {
+    @media (width >= 64rem) { 
+      display: flex;
+    }
 }
 
-.horizontal-tab-button.selected {
-    @apply bg-bc-yellow-500;
+.lg\:block {
+  @media (width >= 64rem) { 
+    display: block;
+  }
 }
+
+/* Menus and Navigation */
+.toc nav a.active {
+  @apply text-bc-coral-500 font-medium border-l-3 border-bc-coral-500 ml-[-2px];
+}
+
+.menu--main .menu-item--active-trail {
+  @apply border-bc-coral-500;
+}
+
+.off-canvas-menu .menu-item--active-trail a {
+  @apply bg-bc-sage-100 text-bc-coral-500;
+}
+
+
+.menu--main .menu  {
+    @apply flex items-end justify-center md:mr-auto md:ml-4 md:pl-4 whitespace-nowrap;
+  }
+
+.menu--main .menu-item {
+    @apply text-gray-900 text-lg border-b-2 border-transparent h-full transition-colors duration-300 pb-1 mx-6;
+
+    &:hover {
+        @apply border-bc-coral-500 text-bc-coral-500;
+    }
+    &:visited {
+        @apply text-gray-900;
+    }
+  }
+
+.off-canvas-menu .menu, .off-canvas-menu .menu-item {
+  @apply ml-0;
+}
+
+.off-canvas-menu .menu-item a {
+    @apply text-gray-900 text-lg border-b-2 border-transparent h-full transition-colors duration-300 px-4 py-2 rounded-xl block mb-2;
+
+    &:hover {
+        @apply bg-bc-sage-50 text-bc-coral-500;
+    }
+}
+
+[x-cloak] { display: none !important; }

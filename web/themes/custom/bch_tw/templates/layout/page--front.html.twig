@@ -45,41 +45,103 @@
 
 {{ attach_library('bch_tw/alpine') }}
     
+
 <div class="px-0 mx-0 mt-4 sm:px-4 rounded-t-3xl bg-cyan-100 sm:mx-2 md:mx-4">
-  <div class="container px-4 mx-auto transition sm:px-0">
-    <header role="banner" x-data="{ open: false }">
-      <div class="flex items-end h-16">
+
+<header
+  x-data="{ open: false }"
+  @click.away="open = false"
+  @keydown.escape.window="open = false"
+  role="navigation"
+  aria-label="Main navigation">
+  
+  <div class="container flex items-end h-16 px-4 mx-auto sm:px-0">
+    <div class="flex items-end justify-between w-full xl:justify-start">
       {{ page.header }}
-      {{ page.primary_menu }}
-      {# {{ page.secondary_menu }} #}
-      <div class="ml-auto whitespace-nowrap">
-       <a href="https://www.iied.org" aria-label="Visit IIED main site" class="items-center pb-2 mb-px text-gray-600 transition-colors md:flex hover:text-bc-coral-500">IIED main site
-       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5" stroke-linecap="round">
-        <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd" />
-      </svg>
-       </a>
+      <div class="hidden xl:flex">{{ page.primary_menu }}</div>
+
+      <div class="hidden ml-auto whitespace-nowrap xl:flex">
+        <a href="https://www.iied.org" aria-label="Visit IIED main site" class="items-center pb-2 text-gray-600 transition-colors mb-[2px] flex hover:text-bc-coral-500">IIED main site
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5" stroke-linecap="round">
+            <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd" />
+          </svg>
+        </a>
       </div>
-      <button class="md:hidden" aria-label="Toggle menu" @click="open = !open">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
-      </button>
+
+      <div id="buttons" class="flex items-center">
+        <button class="relative z-50 inline-flex items-center justify-center w-10 h-10 xl:hidden ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50" aria-label="Toggle menu" @click="open = !open">
+          <template x-if="!open">
+            <!-- Menu Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu">
+              <line x1="4" x2="20" y1="12" y2="12"></line>
+              <line x1="4" x2="20" y1="6" y2="6"></line>
+              <line x1="4" x2="20" y1="18" y2="18"></line>
+            </svg>
+          </template>
+          <template x-if="open">
+            <!-- Close (X) Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 lucide lucide-x">
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </template>
+        </button>
       </div>
-      <div x-show="open" class="md:hidden">
-      {{ page.primary_menu }}
-          <div class="whitespace-nowrap">
-              <a href="https://www.iied.org" aria-label="Visit IIED main site" class="items-center pb-2 mb-px text-gray-600 transition-colors md:flex hover:text-bc-coral-500">IIED main site
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5" stroke-linecap="round">
-                <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd" />
-              </svg>
-              </a>
-          </div>
-      </div>
-    </header>
+
+    </div>
   </div>
+  
+  <div 
+    x-show="open"
+    x-cloak
+    x-transition:enter="transition ease-out duration-300 transform"
+    x-transition:enter-start="opacity-0 -translate-x-full"
+    x-transition:enter-end="opacity-100 translate-x-0"
+    x-transition:leave="transition ease-in duration-300 transform"
+    x-transition:leave-start="opacity-100 translate-x-0"
+    x-transition:leave-end="opacity-0 -translate-x-full"
+    @click.stop
+    class="fixed left-0 top-0 bottom-0 z-40 w-[300px] bg-white p-6 shadow-lg h-screen overflow-y-auto transition-transform duration-300 ease-in-out transform"
+    id="menu"
+    :aria-hidden="open ? 'false' : 'true'"> 
+
+    <nav class="flex flex-col gap-4 mt-16 off-canvas-menu">
+      {{ drupal_menu('main') }} 
+      <a href="https://www.iied.org" aria-label="Visit IIED main site" class="flex items-center ml-4 text-gray-600 transition-colors hover:text-bc-coral-500 whitespace-nowrap">IIED main site
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5" stroke-linecap="round">
+          <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd" />
+        </svg>
+      </a>
+    </nav>
+
+  </div>
+
+  <!-- Overlay -->
+  <div 
+    x-show="open" 
+    x-cloak
+    @click="open = false"
+    x-transition:enter="ease-out duration-300"
+    x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100"
+    x-transition:leave="ease-in duration-300"
+    x-transition:leave-start="opacity-100"
+    x-transition:leave-end="opacity-0"
+    class="fixed inset-0 z-10 bg-neutral-900/10 backdrop-blur-xs"
+    aria-label="Close menu overlay">
+  </div>
+
+</header>
+
+
 </div>
+
 <div class="h-px bg-linear-to-r from-orange-200 via-bc-coral-500 to-orange-200 "></div>
 {# end header section #}
 
-<div class="h-full mx-0 mb-6 overflow-hidden rounded-b-3xl bg-linear-to-t from-bc-sage-100 to-cyan-100 sm:mx-2 md:mx-4">
+
+
+<div class="h-full mx-0 mb-4 overflow-hidden rounded-b-3xl bg-linear-to-t from-bc-sage-100 to-cyan-100 sm:mx-2 md:mx-4">
   <div class="bg-[url(https://www.iied.org/sites/default/files/2025-02/bch-hero.svg)] bg-contain bg-bottom bg-no-repeat">
     <div class="container px-4 mx-auto sm:px-0 layout-container"> 
       {{ page.highlighted }}
@@ -98,7 +160,7 @@
   {{ page.content }}
 
   {% if page.footer %}
-    <footer role="contentinfo" class="px-0 mx-0 mt-4 sm:px-4 rounded-b-3xl sm:rounded-3xl bg-bc-sage-100 sm:mx-2 md:mx-4 min-h-56">
+    <footer role="contentinfo" class="px-0 mx-0 my-4 sm:px-4 rounded-b-3xl sm:rounded-3xl bg-bc-sage-100 sm:mx-2 md:mx-4 min-h-56">
 
       {{ page.footer }}
     </footer>

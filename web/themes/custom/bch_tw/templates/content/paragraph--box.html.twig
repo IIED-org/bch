@@ -59,7 +59,10 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
-      {{ content }}
+      <h3>{{ content.field_heading }}</h3>
+      <div class="overflow-hidden rounded-xl not-prose">{{ content.field_image.0 }}</div>
+      <div class="mb-4 text-base text-neutral-500 not-prose">{{ content.field_media_caption.0 }}</div>
+      {{ content.field_text }}
     {% endblock %}
   </div>
 {% endblock paragraph %}
