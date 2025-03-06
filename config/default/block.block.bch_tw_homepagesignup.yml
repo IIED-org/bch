@@ -1,9 +1,9 @@
-uuid: f078fd7b-70bf-4384-94ac-9c36072821e0
+uuid: 0a956302-f100-4fe0-bd4b-67bec485c8a1
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:form_block:cfb4365a-4776-40eb-b9c7-c04ef6b7c65e'
+    - 'block_content:form_block:bead303c-89c9-4d9f-9558-cbc3291eab77'
   module:
     - block_content
     - system
@@ -12,11 +12,11 @@ dependencies:
 id: bch_tw_homepagesignup
 theme: bch_tw
 region: content
-weight: 0
+weight: -2
 provider: null
-plugin: 'block_content:cfb4365a-4776-40eb-b9c7-c04ef6b7c65e'
+plugin: 'block_content:bead303c-89c9-4d9f-9558-cbc3291eab77'
 settings:
-  id: 'block_content:cfb4365a-4776-40eb-b9c7-c04ef6b7c65e'
+  id: 'block_content:bead303c-89c9-4d9f-9558-cbc3291eab77'
   label: 'Homepage sign up'
   label_display: '0'
   provider: block_content
