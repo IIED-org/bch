@@ -1,0 +1,24 @@
+uuid: 7355807d-0f19-482d-887f-9e550402742d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bch_tw
+id: bch_tw_pagetitle
+theme: bch_tw
+region: content
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /resources
