@@ -80,20 +80,20 @@
 <article{{ attributes.addClass(classes) }}>
 
 
-  <div class="grid grid-cols-1 gap-4 py-12 lg:grid-cols-4">
+  <div class="grid grid-cols-1 gap-4 py-12 xl:grid-cols-4">
     <aside class="col-span-1">
-      <div class="sticky top-4 toc lg:my-6">
+      <div class="sticky top-4 toc xl:my-6">
 
-          <div class="hidden w-24 h-2 mb-4 md:bg-bc-coral-300 rounded-2xl lg:flex">
+          <div class="hidden w-24 h-2 mb-4 md:bg-bc-coral-300 rounded-2xl xl:flex">
           </div>
 
         {# TOC #}
-        <div x-data="{ open: false }" class="mb-6 border border-bc-coral-500 rounded-2xl lg:border-0">
-          <div class="flex items-center justify-between px-4 py-2 lg:px-0 lg:py-2"> 
-            <h3 class="text-xl lg:text-2xl lg:mb-4">On this page</h3>
+        <div x-data="{ open: false }" class="mb-6 border border-bc-coral-500 rounded-2xl xl:border-0">
+          <div class="flex items-center justify-between px-4 py-2 xl:px-0 xl:py-2"> 
+            <h3 class="text-xl lg:text-2xl xl:mb-4">On this page</h3>
 
 
-            <button @click="open = !open" class="lg:hidden">
+            <button @click="open = !open" class="xl:hidden">
               <span x-show="!open">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
@@ -108,7 +108,7 @@
           </div>
 
 
-          <div :class="{'block': open, 'hidden': !open}" class="lg:block lg:space-y-2">
+          <div :class="{'block': open, 'hidden': !open}" class="xl:flex lg:space-y-2">
             <nav>
               {{ content.field_table_of_contents }}
             </nav>
@@ -117,7 +117,7 @@
         </div>
         {# End TOC  #}
 
-        <div class="hidden w-24 h-2 mt-4 md:bg-bc-coral-300 rounded-2xl lg:flex">
+        <div class="hidden w-24 h-2 mt-4 md:bg-bc-coral-300 rounded-2xl xl:flex">
         </div>
 
       </div>
@@ -126,7 +126,7 @@
     <div class="col-span-1 lg:col-span-3">
       <h1 class="page-title">{{ node.label }}</h1>
       <div{{ content_attributes.addClass('node__content') }}>
-        <div class="prose prose-lg">{{ content.field_standfirst }}
+        <div class="mb-4 prose prose-lg lg:prose-xl">{{ content.field_standfirst }}
         </div>
         {{ content.field_paragraphs}}
       </div>
