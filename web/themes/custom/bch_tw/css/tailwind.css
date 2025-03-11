@@ -181,3 +181,19 @@
 }
 
 [x-cloak] { display: none !important; }
+
+/* sign up form */
+
+#clickd .clickdform input[type="text"], 
+.clickdimensions .clickdform input[type="text"] 
+{
+  @apply h-9 border border-neutral-300 rounded-lg px-4 py-2 min-w-sm sm:min-w-md;
+}
+#clickd #btnSubmit,
+.clickdimensions #btnSubmit
+ {
+  @apply px-4 py-3 border-none rounded-full bg-bc-coral-300 cursor-pointer font-body text-gray-800 transition-colors duration-150 shadow-sm hover:shadow-none hover:bg-bc-yellow-500;
+}
+.clickdform.mainDiv {
+  height: 100% !important;
+}
