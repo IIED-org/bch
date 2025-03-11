@@ -17,7 +17,7 @@ provider: null
 plugin: 'block_content:bead303c-89c9-4d9f-9558-cbc3291eab77'
 settings:
   id: 'block_content:bead303c-89c9-4d9f-9558-cbc3291eab77'
-  label: 'Homepage sign up'
+  label: 'Sign up form'
   label_display: '0'
   provider: block_content
   status: true
