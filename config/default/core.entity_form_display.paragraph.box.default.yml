@@ -36,7 +36,7 @@ content:
     weight: 1
     region: content
     settings:
-      size: 60
+      size: 90
       placeholder: ''
     third_party_settings: {  }
   field_text:
