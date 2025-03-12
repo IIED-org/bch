@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@700&display=swap');
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 @plugin "@tailwindcss/forms";
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Serif:ital,wght@400,700&display=swap');
 
 
 @font-face {
@@ -10,8 +12,6 @@
   font-style: normal;
   font-weight: 400;
   src: url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@400,700&display=swap') format('woff2'),
-       local('Noto Serif'),
-       local('serif');
   font-display: swap; 
 }
 
@@ -20,8 +20,6 @@
   font-style: italic;
   font-weight: 700;
   src: url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@400,700&display=swap') format('woff2'),
-       local('Noto Serif Italic'),
-       local('italic');
   font-display: swap;
 }
 
@@ -30,8 +28,6 @@
   font-style: normal;
   font-weight: 400;
   src: url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Serif:ital,wght@400,700&display=swap') format('woff2'),
-       local('Noto Sans'),
-       local('sans-serif');
   font-display: swap;
 }
 
@@ -80,6 +76,11 @@
 
 @layer utilities {
 
+  .prose {
+    font-family: var(--font-body);
+    max-width: 72ch;
+  }
+
   .prose a {
     color: var(--color-blue-700);
     &:hover {
@@ -91,10 +92,12 @@
   }
 }
 
-
+  h2 .field--name-field-heading {
+    @apply text-3xl lg:text-4xl font-normal;
+}
 
 .page-title {
-    @apply text-3xl sm:text-4xl lg:text-5xl xl:text-6xl tracking-tight text-bc-coral-500;
+    @apply text-4xl lg:text-5xl xl:text-6xl tracking-tight text-bc-coral-500;
   }
 
 .media--type-remote-video iframe.media-oembed-content {
@@ -181,3 +184,19 @@
 }
 
 [x-cloak] { display: none !important; }
+
+/* sign up form */
+
+#clickd .clickdform input[type="text"], 
+.clickdimensions .clickdform input[type="text"] 
+{
+  @apply h-9 border border-neutral-300 rounded-lg px-4 py-2 min-w-sm sm:min-w-md;
+}
+#clickd #btnSubmit,
+.clickdimensions #btnSubmit
+ {
+  @apply px-4 py-3 border-none rounded-full bg-bc-coral-300 cursor-pointer font-body text-gray-800 transition-colors duration-150 shadow-sm hover:shadow-none hover:bg-bc-yellow-500;
+}
+.clickdform.mainDiv {
+  height: 100% !important;
+}
