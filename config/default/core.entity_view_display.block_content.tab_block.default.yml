@@ -8,72 +8,7 @@ dependencies:
     - field.field.block_content.tab_block.field_tab_text_three
     - field.field.block_content.tab_block.field_tab_text_two
   module:
-    - field_group
     - text
-third_party_settings:
-  field_group:
-    group_tabs:
-      children:
-        - group_tab_one
-        - group_tab_two
-        - group_tab_three
-      label: Tabs
-      parent_name: ''
-      region: content
-      weight: 0
-      format_type: tabs
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        label_as_html: false
-        direction: horizontal
-        width_breakpoint: 640
-    group_tab_one:
-      children:
-        - field_tab_text_one
-      label: 'About biocultural heritage'
-      parent_name: group_tabs
-      region: content
-      weight: 2
-      format_type: tab
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        label_as_html: false
-        formatter: open
-        description: ''
-    group_tab_two:
-      children:
-        - field_tab_text_two
-      label: 'Global goals and local resilience'
-      parent_name: group_tabs
-      region: content
-      weight: 3
-      format_type: tab
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        label_as_html: false
-        formatter: closed
-        description: ''
-    group_tab_three:
-      children:
-        - field_tab_text_three
-      label: 'Biocultural territories and rights'
-      parent_name: group_tabs
-      region: content
-      weight: 4
-      format_type: tab
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        label_as_html: false
-        formatter: closed
-        description: ''
 id: block_content.tab_block.default
 targetEntityType: block_content
 bundle: tab_block
@@ -84,20 +19,21 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 6
+    weight: 0
     region: content
   field_tab_text_three:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 9
+    weight: 2
     region: content
   field_tab_text_two:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 1
     region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true

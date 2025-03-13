@@ -12,13 +12,13 @@ dependencies:
 id: bch_tw_contactblock
 theme: bch_tw
 region: content
-weight: 0
+weight: -1
 provider: null
 plugin: contact_block
 settings:
   id: contact_block
   label: 'Contact block'
-  label_display: visible
+  label_display: '0'
   provider: contact_block
   contact_form: contact
   form_display: default

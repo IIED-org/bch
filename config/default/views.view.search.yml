@@ -579,7 +579,7 @@ display:
         title: Resources
         description: ''
         weight: 4
-        enabled: false
+        enabled: true
         expanded: false
         menu_name: main
         parent: ''

@@ -12,7 +12,7 @@ dependencies:
 id: bch_tw_exposedformsearchpage_2
 theme: bch_tw
 region: content
-weight: -6
+weight: -7
 provider: null
 plugin: 'views_exposed_filter_block:search-page_2'
 settings:
