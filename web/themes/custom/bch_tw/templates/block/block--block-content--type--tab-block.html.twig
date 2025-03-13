@@ -31,29 +31,109 @@
     'block',
     'block-' ~ configuration.provider|clean_class,
     'block-' ~ plugin_id|clean_class,
-    'bg-bc-sage-100',
     'rounded-3xl',
     'px-0',
     'mx-0',
     'mt-4',
-    'sm:px-4',
     'sm:mx-2', 
     'md:mx-4',
-    'py-12',
     'mb-4',
-    'bg-[url(/sites/default/files/2025-03/764.jpg)]',
-    'bg-cover',
-    'bg-right-bottom',
-    'bg-no-repeat',
   ]
 %}
+
+
 <div{{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
-  {% if label %}
-    <h2{{ title_attributes }}>{{ label }}</h2>
-  {% endif %}
-  {{ title_suffix }}
-  {% block content %}
-    {{ content }}
-  {% endblock %}
+
+  <div x-data="{ activeTab: 'tab1', bgImage: 'url(\'https://stage.bch.iied.org/sites/default/files/2025-03/tab2.jpg\')' }">
+    <div class="relative overflow-hidden transition-all duration-200 ease-in-out rounded-3xl sm:px-4"
+        x-bind:style="{ backgroundImage: bgImage, backgroundSize: 'cover', backgroundPosition: 'right bottom', backgroundRepeat: 'no-repeat', backgroundColor: '#F5F2EA' }">
+        <div class="container relative z-10 px-4 py-12 mx-auto sm:px-0">
+        
+          <div class="flex flex-col">
+            <div class="flex flex-wrap gap-2">
+              <button
+                class="flex-grow px-6 py-6 text-base font-bold transition-all duration-300 rounded-full shadow-sm sm:flex-grow-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-400"
+                :class="{
+                  'bg-bc-yellow-500 text-gray-900 hover:bg-bc-yellow-500': activeTab === 'tab1',
+                  'bg-white text-gray-600 hover:bg-bc-yellow-300': activeTab !== 'tab1'
+                }"
+                aria-controls="tab1-content"
+                :aria-selected="activeTab === 'tab1'"
+                role="tab"
+                x-on:click="activeTab = 'tab1'; bgImage = 'url(\'https://stage.bch.iied.org/sites/default/files/2025-03/tab2.jpg\')'; "
+              >
+                About biocultural heritage
+              </button>
+              <button
+                class="flex-grow px-6 py-6 text-base font-bold transition-all duration-300 rounded-full shadow-sm sm:flex-grow-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-400"
+                :class="{
+                  'bg-bc-yellow-500 text-gray-900 hover:bg-bc-yellow-500': activeTab === 'tab2',
+                  'bg-white text-gray-600 hover:bg-bc-yellow-300': activeTab !== 'tab2'
+                }"
+                aria-controls="tab2-content"
+                :aria-selected="activeTab === 'tab2'"
+                role="tab"
+                x-on:click="activeTab = 'tab2'; bgImage = 'url(\'https://stage.bch.iied.org/sites/default/files/2025-03/tab3.jpg\')'; "
+              >
+                Global goals and local resilience
+              </button>
+              <button
+                class="flex-grow px-6 py-6 text-base font-bold transition-all duration-300 rounded-full shadow-sm sm:flex-grow-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-400"
+                :class="{
+                  'bg-bc-yellow-500 text-gray-900 hover:bg-bc-yellow-500': activeTab === 'tab3',
+                  'bg-white text-gray-600 hover:bg-bc-yellow-300': activeTab !== 'tab3'
+                }"
+                aria-controls="tab3-content"
+                :aria-selected="activeTab === 'tab3'"
+                role="tab"
+                x-on:click="activeTab = 'tab3'; bgImage = 'url(\'https://stage.bch.iied.org/sites/default/files/2025-03/764.jpg\')'; "
+              >
+                Biocultural territories and rights
+              </button>
+            </div>
+            <div class="mt-4">
+              <div
+                id="tab1-content"
+                role="tabpanel"
+                aria-labelledby="tab1"
+                class="p-6 prose transition-opacity duration-300 bg-white shadow-sm rounded-3xl md:p-8 min-h-[520px]"
+                x-show="activeTab === 'tab1'"
+              >
+                <div class="max-w-3xl">
+                  <div class="p-4 bg-white">{{ content.field_tab_text_one }}</div>
+                </div>
+              </div>
+              <div
+                id="tab2-content"
+                role="tabpanel"
+                aria-labelledby="tab2"
+                class="p-6 prose transition-opacity duration-300 bg-white shadow-sm rounded-3xl md:p-8 min-h-[520px]"
+                x-show="activeTab === 'tab2'"
+              >
+                <div class="max-w-3xl">
+                  <div class="p-4 bg-white">{{ content.field_tab_text_two }}</div>
+                </div>
+              </div>
+              <div
+                id="tab3-content"
+                role="tabpanel"
+                aria-labelledby="tab3"
+                class="p-6 prose transition-opacity duration-300 bg-white shadow-sm rounded-3xl md:p-8 min-h-[520px]"
+                x-show="activeTab === 'tab3'"
+              >
+                <div class="max-w-3xl">
+                  <div class="p-4 bg-white">{{ content.field_tab_text_three}}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+
+    </div>
+  </div>
+
+
 </div>

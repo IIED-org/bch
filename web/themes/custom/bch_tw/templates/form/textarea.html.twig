@@ -18,8 +18,15 @@
     'form-textarea',
     resizable ? 'resize-' ~ resizable,
     required ? 'required',
+    'mt-1',
+    'p-2',
+    'block',
+    'w-full',
+    'rounded-xl',
+    'border border-neutral-300',
   ]
 %}
 <div{{ wrapper_attributes.addClass('form-textarea-wrapper') }}>
   <textarea{{ attributes.addClass(classes) }}>{{ value }}</textarea>
 </div>
+

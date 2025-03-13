@@ -31,7 +31,9 @@
  * @see template_preprocess_pager()
  */
 #}
+
 {% if items %}
+<div class="grid py-12 place-items-center">
   <nav class="pager" role="navigation" aria-labelledby="{{ heading_id }}">
     <{{ pagination_heading_level }} id="{{ heading_id }}" class="visually-hidden">{{ 'Pagination'|t }}</{{ pagination_heading_level }}>
     <ul class="pager__items js-pager__items">
@@ -97,4 +99,5 @@
       {% endif %}
     </ul>
   </nav>
+</div>  
 {% endif %}
