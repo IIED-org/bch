@@ -1,23 +1,23 @@
-uuid: 415f8b93-e516-4d05-a63d-1a1ff5824d6c
+uuid: 51332ed6-3290-450d-a30c-4a9083bfa75b
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:tab_block:abd055a3-662f-4613-920d-f0fc12f055b0'
+    - 'block_content:basic_block:dbea0ad3-f36d-495b-88bd-caf7f381b7a9'
   module:
     - block_content
     - system
   theme:
     - bch_tw
-id: bch_tw_hometabblock
+id: bch_tw_homepageresources
 theme: bch_tw
 region: content
-weight: -5
+weight: -3
 provider: null
-plugin: 'block_content:abd055a3-662f-4613-920d-f0fc12f055b0'
+plugin: 'block_content:dbea0ad3-f36d-495b-88bd-caf7f381b7a9'
 settings:
-  id: 'block_content:abd055a3-662f-4613-920d-f0fc12f055b0'
-  label: 'Home tab block'
+  id: 'block_content:dbea0ad3-f36d-495b-88bd-caf7f381b7a9'
+  label: 'Homepage resources'
   label_display: '0'
   provider: block_content
   status: true
