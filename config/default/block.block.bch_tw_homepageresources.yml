@@ -12,7 +12,7 @@ dependencies:
 id: bch_tw_homepageresources
 theme: bch_tw
 region: content
-weight: -3
+weight: -2
 provider: null
 plugin: 'block_content:dbea0ad3-f36d-495b-88bd-caf7f381b7a9'
 settings:

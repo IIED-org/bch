@@ -12,7 +12,7 @@ dependencies:
 id: bch_tw_hometabblock
 theme: bch_tw
 region: content
-weight: -5
+weight: -4
 provider: null
 plugin: 'block_content:abd055a3-662f-4613-920d-f0fc12f055b0'
 settings:

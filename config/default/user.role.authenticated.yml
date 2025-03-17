@@ -8,6 +8,7 @@ dependencies:
   module:
     - captcha
     - coffee
+    - contact
     - dashboard
     - file
     - honeypot
@@ -25,6 +26,7 @@ is_admin: false
 permissions:
   - 'access coffee'
   - 'access content'
+  - 'access site-wide contact form'
   - 'bypass honeypot protection'
   - 'delete own files'
   - 'skip CAPTCHA'

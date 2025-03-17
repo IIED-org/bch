@@ -6,6 +6,7 @@ dependencies:
     - block_content.type.tab_block
     - field.storage.block_content.field_tab_text_two
     - filter.format.content_format
+    - filter.format.full_html
   module:
     - text
 id: block_content.tab_block.field_tab_text_two
@@ -21,4 +22,5 @@ default_value_callback: ''
 settings:
   allowed_formats:
     - content_format
+    - full_html
 field_type: text_long

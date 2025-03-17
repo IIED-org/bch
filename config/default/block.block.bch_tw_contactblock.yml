@@ -12,7 +12,7 @@ dependencies:
 id: bch_tw_contactblock
 theme: bch_tw
 region: content
-weight: -1
+weight: 0
 provider: null
 plugin: contact_block
 settings:
@@ -26,4 +26,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: /node/7
+    pages: "/node/7\r\n/node/154"
