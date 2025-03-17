@@ -12,7 +12,7 @@ dependencies:
 id: bch_tw_homepagesignup
 theme: bch_tw
 region: content
-weight: -2
+weight: -1
 provider: null
 plugin: 'block_content:bead303c-89c9-4d9f-9558-cbc3291eab77'
 settings:
