@@ -1266,6 +1266,9 @@
   .mb-12 {
     margin-bottom: calc(var(--spacing) * 12);
   }
+  .mb-14 {
+    margin-bottom: calc(var(--spacing) * 14);
+  }
   .mb-\[2px\] {
     margin-bottom: 2px;
   }
@@ -1348,6 +1351,12 @@
   }
   .min-h-\[520px\] {
     min-height: 520px;
+  }
+  .min-h-\[550px\] {
+    min-height: 550px;
+  }
+  .min-h-\[580px\] {
+    min-height: 580px;
   }
   .w-4 {
     width: calc(var(--spacing) * 4);
@@ -1526,6 +1535,9 @@
   .border-bc-coral-500 {
     border-color: var(--color-bc-coral-500);
   }
+  .border-bc-yellow-500 {
+    border-color: var(--color-bc-yellow-500);
+  }
   .border-neutral-300 {
     border-color: var(--color-neutral-300);
   }
@@ -1560,6 +1572,9 @@
   }
   .bg-\[url\(\/sites\/default\/files\/2025-03\/peru-amaranth-in-the-potato-park\.jpg\)\] {
     background-image: url(/sites/default/files/2025-03/peru-amaranth-in-the-potato-park.jpg);
+  }
+  .bg-\[url\(https\:\/\/stage\.bch\.iied\.org\/sites\/default\/files\/2025-03\/bch-landscape\.svg\)\] {
+    background-image: url(https://stage.bch.iied.org/sites/default/files/2025-03/bch-landscape.svg);
   }
   .bg-\[url\(https\:\/\/www\.iied\.org\/sites\/default\/files\/2025-02\/bch-hero\.svg\)\] {
     background-image: url(https://www.iied.org/sites/default/files/2025-02/bch-hero.svg);
@@ -2221,6 +2236,11 @@
       flex-direction: row;
     }
   }
+  .md\:items-end {
+    @media (width >= 48rem) {
+      align-items: flex-end;
+    }
+  }
   .md\:bg-bc-coral-300 {
     @media (width >= 48rem) {
       background-color: var(--color-bc-coral-300);
@@ -2878,6 +2898,9 @@ h2 .field--name-field-heading {
     font-size: var(--text-6xl);
     line-height: var(--tw-leading, var(--text-6xl--line-height));
   }
+}
+h1.page-title {
+  margin-top: calc(var(--spacing) * 4);
 }
 .media--type-remote-video iframe.media-oembed-content {
   aspect-ratio: var(--aspect-video);
