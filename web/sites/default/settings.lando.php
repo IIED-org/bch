@@ -151,4 +151,13 @@ ini_set('display_startup_errors', TRUE);
  * user/pass combination you need). Change the domain.org part to match the
  * domain (usually production, sometimes development) with the images.
  */
-// $config['stage_file_proxy.settings']['origin'] = 'http://example.com';
+
+ $config['stage_file_proxy.settings']['origin'] = 'https://stage.bch.iied.org';
+
+/**
+ * Use "local" config split for development
+ */
+$config['config_split.config_split.local']['status'] = TRUE;
+$config['config_split.config_split.dev']['status'] = FALSE;
+$config['config_split.config_split.stage']['status'] = FALSE;
+$config['config_split.config_split.prod']['status'] = FALSE;
