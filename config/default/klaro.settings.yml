@@ -27,7 +27,7 @@ library:
   group_by_purpose: true
   accept_all: true
   hide_decline_all: false
-  hide_learn_more: true
+  hide_learn_more: false
   learn_more_as_button: false
   additional_class: ''
   html_texts: true
