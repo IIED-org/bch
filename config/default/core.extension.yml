@@ -16,6 +16,7 @@ module:
   ckeditor5: 0
   coffee: 0
   config: 0
+  config_split: 0
   contact: 0
   contact_block: 0
   content_moderation: 0
@@ -23,7 +24,6 @@ module:
   crop: 0
   dashboard: 0
   datetime: 0
-  dblog: 0
   dynamic_page_cache: 0
   easy_breadcrumb: 0
   easy_email: 0
@@ -42,7 +42,6 @@ module:
   entity_reference_revisions: 0
   field: 0
   field_group: 0
-  field_ui: 0
   file: 0
   filter: 0
   focal_point: 0
@@ -72,6 +71,10 @@ module:
   options: 0
   package_manager: 0
   page_cache: 0
+  password_policy_character_types: 0
+  password_policy_history: 0
+  password_policy_length: 0
+  password_policy_username: 0
   path: 0
   path_alias: 0
   project_browser: 0
@@ -100,12 +103,13 @@ module:
   twig_tweak: 0
   update: 0
   user: 0
-  views_ui: 0
   workflows: 0
   eca_form: 1
   pathauto: 1
+  password_policy: 10
   views: 10
   paragraphs: 11
+  password_policy_extras: 20
   publication_date: 99
 theme:
   claro: 0
