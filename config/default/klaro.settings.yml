@@ -18,6 +18,7 @@ styles:
   - light
 process_descriptions: true
 override_css: true
+show_notice_title: false
 library:
   element_id: klaro
   storage_method: cookie
@@ -32,4 +33,3 @@ library:
   additional_class: ''
   html_texts: true
   auto_focus: true
-show_notice_title: false
