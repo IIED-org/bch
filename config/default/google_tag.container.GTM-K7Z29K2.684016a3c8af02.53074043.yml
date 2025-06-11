@@ -1,0 +1,41 @@
+uuid: 1a0b489c-0cba-42d7-92e9-875d49a0fcdf
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: GTM-K7Z29K2.684016a3c8af02.53074043
+label: GTM-K7Z29K2
+weight: 0
+tag_container_ids:
+  - GTM-K7Z29K2
+advanced_settings:
+  consent_mode: false
+  gtm:
+    GTM-K7Z29K2:
+      data_layer: dataLayer
+      include_classes: false
+      allowlist_classes: ''
+      blocklist_classes: ''
+      include_environment: false
+      environment_id: ''
+      environment_token: ''
+dimensions_metrics: {  }
+conditions:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous
+events:
+  generate_lead:
+    value: ''
+    currency: ''
+  search: {  }
+  custom: {  }
+  login:
+    method: CMS
+  sign_up:
+    method: CMS
