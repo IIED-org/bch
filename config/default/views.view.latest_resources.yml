@@ -182,7 +182,7 @@ display:
           plugin_id: text
           empty: false
           content:
-            value: "<div class=\"prose prose-lg\">\r\n<h2>Latest</h2>\r\n\r\n<p class=\"mb-6\">Our most recently published news, articles and publications on biocultural heritage</p>\r\n</div>"
+            value: "<div class=\"prose prose-lg\">\r\n<h2>Latest</h2>\r\n\r\n<p class=\"mb-6\">Featured recently published news, articles and publications on biocultural heritage</p>\r\n</div>"
             format: full_html
           tokenize: false
       footer: {  }

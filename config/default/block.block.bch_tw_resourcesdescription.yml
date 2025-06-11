@@ -1,9 +1,9 @@
-uuid: e7fd2728-7583-4e5d-9aa1-244bcc0c29ff
+uuid: fa15f0b8-463c-4e17-924c-79d350a95a13
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic_block:7f2013fd-1353-4e31-a179-d0ba598650b6'
+    - 'block_content:basic_block:1a07dc68-ae0e-41b1-ac00-ffc8e1f51ef4'
   module:
     - block_content
     - system
@@ -14,9 +14,9 @@ theme: bch_tw
 region: content
 weight: -7
 provider: null
-plugin: 'block_content:7f2013fd-1353-4e31-a179-d0ba598650b6'
+plugin: 'block_content:1a07dc68-ae0e-41b1-ac00-ffc8e1f51ef4'
 settings:
-  id: 'block_content:7f2013fd-1353-4e31-a179-d0ba598650b6'
+  id: 'block_content:1a07dc68-ae0e-41b1-ac00-ffc8e1f51ef4'
   label: 'Resources description'
   label_display: '0'
   provider: block_content
