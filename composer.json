@@ -17,6 +17,9 @@
     },
     "require": {
         "composer/installers": "^2.3",
+        "drupal/backup_migrate": "^5.1",
+        "drupal/backup_migrate_aws_s3": "^6.0",
+        "drupal/clamav": "^2.1",
         "drupal/config_split": "^2.0",
         "drupal/contact_block": "^2.0",
         "drupal/core-composer-scaffold": "^11.1.1",
@@ -41,7 +44,10 @@
         "drupal/project_browser": "@alpha",
         "drupal/publication_date": "^3.0",
         "drupal/rabbit_hole": "^1.0",
+        "drupal/real_aes": "^2.6",
+        "drupal/session_limit": "^2.0",
         "drupal/stage_file_proxy": "^3.1",
+        "drupal/tfa": "^1.10",
         "drupal/twig_tweak": "^3.4",
         "drupal/webform": "@beta",
         "drush/drush": "^13"
