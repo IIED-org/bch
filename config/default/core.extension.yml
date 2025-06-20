@@ -14,6 +14,7 @@ module:
   breakpoint: 0
   captcha: 0
   ckeditor5: 0
+  clamav: 0
   coffee: 0
   config: 0
   config_split: 0
@@ -39,6 +40,7 @@ module:
   eca_ui: 0
   eca_user: 0
   editor: 0
+  encrypt: 0
   entity_reference_revisions: 0
   field: 0
   field_group: 0
@@ -53,6 +55,7 @@ module:
   inline_form_errors: 0
   jquery_ui: 0
   jquery_ui_resizable: 0
+  key: 0
   klaro: 0
   layout_builder: 0
   layout_discovery: 0
@@ -79,6 +82,7 @@ module:
   path_alias: 0
   project_browser: 0
   rabbit_hole: 0
+  real_aes: 0
   redirect: 0
   redirect_404: 0
   responsive_image: 0
@@ -97,6 +101,7 @@ module:
   system: 0
   taxonomy: 0
   text: 0
+  tfa: 0
   token: 0
   toolbar: 0
   trash: 0
