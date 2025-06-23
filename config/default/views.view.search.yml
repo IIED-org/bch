@@ -217,7 +217,7 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
-                  hide_label: false
+                  hide_label: true
       access:
         type: perm
         options:
@@ -273,9 +273,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
             expose_fields: false
             placeholder: 'Enter search keywords'
             searched_fields_id: search_api_fulltext_searched_fields
@@ -333,6 +330,7 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      enabled: false
       display_extenders: {  }
       path: search
     cache_metadata:
@@ -470,9 +468,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -506,7 +501,7 @@ display:
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
-            label: ''
+            label: Search
             description: ''
             use_operator: false
             operator: search_api_fulltext_op
@@ -518,9 +513,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
             expose_fields: false
             placeholder: 'Search terms'
             searched_fields_id: search_api_fulltext_searched_fields
@@ -572,7 +564,17 @@ display:
         filter_groups: false
         header: false
       display_description: ''
-      header: {  }
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: result
+          empty: false
+          content: '<div class="pb-12">Displaying @start - @end of @total</div>'
       exposed_block: true
       display_extenders: {  }
       path: resources
