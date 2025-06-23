@@ -44,7 +44,7 @@
 
 <div{{ attributes.addClass(classes) }}>
 
-  <div x-data="{ activeTab: 'tab1', bgImage: 'url(\'https://stage.bch.iied.org/sites/default/files/2025-03/tab2.jpg\')' }">
+  <div x-data="{ activeTab: 'tab1', bgImage: 'url(\'/themes/custom/bch_tw/images/tab1.jpg\')' }">
     <div class="relative overflow-hidden transition-all duration-200 ease-in-out rounded-3xl sm:px-4"
         x-bind:style="{ backgroundImage: bgImage, backgroundSize: 'cover', backgroundPosition: 'right bottom', backgroundRepeat: 'no-repeat', backgroundColor: '#F5F2EA' }">
         <div class="container relative z-10 px-4 py-12 mx-auto sm:px-0">
@@ -60,7 +60,7 @@
                 aria-controls="tab1-content"
                 :aria-selected="activeTab === 'tab1'"
                 role="tab"
-                x-on:click="activeTab = 'tab1'; bgImage = 'url(\'https://stage.bch.iied.org/sites/default/files/2025-03/tab2.jpg\')'; "
+                x-on:click="activeTab = 'tab1'; bgImage = 'url(\'/themes/custom/bch_tw/images/tab1.jpg\')'; "
               >
                 About biocultural heritage
               </button>
@@ -73,7 +73,7 @@
                 aria-controls="tab2-content"
                 :aria-selected="activeTab === 'tab2'"
                 role="tab"
-                x-on:click="activeTab = 'tab2'; bgImage = 'url(\'https://stage.bch.iied.org/sites/default/files/2025-03/tab3.jpg\')'; "
+                x-on:click="activeTab = 'tab2'; bgImage = 'url(\'/themes/custom/bch_tw/images/tab2.jpg\')'; "
               >
                 Global goals and local resilience
               </button>
@@ -86,7 +86,7 @@
                 aria-controls="tab3-content"
                 :aria-selected="activeTab === 'tab3'"
                 role="tab"
-                x-on:click="activeTab = 'tab3'; bgImage = 'url(\'https://stage.bch.iied.org/sites/default/files/2025-03/764.jpg\')'; "
+                x-on:click="activeTab = 'tab3'; bgImage = 'url(\'/themes/custom/bch_tw/images/tab3.jpg\')'; "
               >
                 Biocultural territories and rights
               </button>

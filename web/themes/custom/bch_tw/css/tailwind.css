@@ -53,6 +53,12 @@
 
   p {
     font-family: var(--font-body);
+    color: var(--color-gray-950);
+  }
+
+  nav, header, footer, aside {
+    font-family: var(--font-body);
+    color: var(--color-gray-950);
   }
 }
 
@@ -205,4 +211,16 @@
 }
 .clickdform.mainDiv {
   height: 100% !important;
+}
+
+.path-resources .page-title {
+  @apply pt-12;
+}
+
+.pager__item.is-active {
+  @apply bg-bc-coral-500 text-white;
+}
+
+.field--name-field-media-caption p {
+  @apply text-neutral-500;
 }

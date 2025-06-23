@@ -27,8 +27,52 @@
 
 {% if content %}
   <div{{ attributes.addClass(classes) }}>
+
+    <div class="grid grid-cols-1 gap-x-12 lg:grid-cols-4 lg:gap-24">
+
+      <div class="lg:col-span-3">
+        <div class="!max-w-screen-md prose">
+          {{ drupal_entity('block_content', '2') }}
+        </div>  
+      </div>
+
+      <div class="lg:col-span-1">
+        <div class="prose">
+          {{ drupal_menu('footer') }}
+        </div>
+      </div>   
+
+    </div>
+
+    <div class="partners">
+      {{ drupal_entity('block_content', '12') }}
+    </div>
+
     <div class="grid grid-cols-1 gap-12 border-b lg:grid-cols-4 lg:gap-24 border-bc-coral-300">
 
+      <div class="lg:col-span-3"> 
+        <div>
+          {{ drupal_entity('block_content', '7') }}
+        </div> 
+      </div>
+
+      <div class="lg:col-span-1">
+          {{ drupal_entity('block_content', '6') }}
+      </div>   
+
+    </div>
+
+
+    <div class="!max-w-none prose">
+     {{ drupal_entity('block_content', '9') }}
+    </div> 
+
+  </div>
+{% endif %}
+
+
+
+{# 
       <div class="lg:col-span-3">
         <div class="!max-w-screen-md mb-8 prose">
           {{ drupal_entity('block_content', '2') }}
@@ -47,10 +91,4 @@
         </div>  
       </div>   
 
-    </div>
-
-    <div class="!max-w-none prose">
-     {{ drupal_entity('block_content', '9') }}
-    </div> 
-  </div>
-{% endif %}
+    </div> #}
