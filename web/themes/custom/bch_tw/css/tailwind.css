@@ -224,3 +224,11 @@
 .field--name-field-media-caption p {
   @apply text-neutral-500;
 }
+
+button.cn-decline.klaro-close {
+visibility: hidden;
+}
+
+#klaro-cookie-notice button.cn-decline.klaro-close {
+  visibility: inherit;
+}
