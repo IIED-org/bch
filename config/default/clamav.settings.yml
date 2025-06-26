@@ -1,7 +1,7 @@
 _core:
   default_config_hash: 8lFEG9XVghDf6aSd4WXsDEbAlBuvpTBI3gxmUUt_jyY
 enabled: true
-outage_action: 0
+outage_action: 1
 overridden_schemes: {  }
 scan_mode: 2
 verbosity: 1

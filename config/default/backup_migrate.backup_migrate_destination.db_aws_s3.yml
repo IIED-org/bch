@@ -1,0 +1,16 @@
+uuid: 17341036-e341-4f02-8781-be404ff0d986
+langcode: en
+status: true
+dependencies:
+  module:
+    - backup_migrate_aws_s3
+id: db_aws_s3
+label: 'Db AWS S3'
+type: awss3
+config:
+  s3_endpoint: 'https://s3.eu-west-2.amazonaws.com'
+  s3_access_key_name: aws_access_key
+  s3_secret_key_name: aws_secret_key
+  s3_bucket: iied-backup
+  s3_folder_prefix: Biocultural/Biocultural_database
+  s3_region: eu-west-2

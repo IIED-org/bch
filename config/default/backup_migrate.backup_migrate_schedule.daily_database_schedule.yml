@@ -1,0 +1,13 @@
+uuid: 4829de41-3785-4fe0-9b4e-58a5ddda05fd
+langcode: en
+status: true
+dependencies: {  }
+id: daily_database_schedule
+label: 'Daily database schedule'
+enabled: false
+keep: 7
+period: 86400
+cron: null
+source_id: default_db
+destination_id: db_aws_s3
+settings_profile_id: biocultural_daily_database

@@ -1,0 +1,13 @@
+uuid: f6431856-146d-45ca-9d7f-360c52702617
+langcode: en
+status: true
+dependencies: {  }
+id: daily_files_schedule
+label: 'Daily files schedule'
+enabled: false
+keep: 7
+period: 86400
+cron: null
+source_id: public_files
+destination_id: files_aws_s3
+settings_profile_id: biocultural_daily_files
