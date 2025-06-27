@@ -4,8 +4,8 @@ langcode: en
 enabled: true
 required_roles:
   content_editor: content_editor
-  administrator: administrator
   authenticated: '0'
+  administrator: '0'
 send_plugins: {  }
 login_plugins:
   tfa_trusted_browser: tfa_trusted_browser
