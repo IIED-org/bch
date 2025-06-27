@@ -1,11 +1,11 @@
 _core:
   default_config_hash: JyIkFj38h-aTLsrCfejAfP277qBJ61tlaLEBH44IHhg
 langcode: en
-enabled: false
+enabled: true
 required_roles:
   content_editor: content_editor
-  administrator: administrator
   authenticated: '0'
+  administrator: '0'
 send_plugins: {  }
 login_plugins:
   tfa_trusted_browser: tfa_trusted_browser
@@ -30,7 +30,7 @@ validation_plugin_settings:
     site_name_prefix: 1
     name_prefix: TFA
     issuer: Drupal
-validation_skip: 3
+validation_skip: 1
 users_without_tfa_redirect: true
 reset_pass_skip_enabled: true
 encryption: tfa_encryption

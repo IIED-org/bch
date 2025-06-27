@@ -23,6 +23,7 @@ dependencies:
     - redirect
     - scheduler
     - system
+    - tfa
     - toolbar
 _core:
   default_config_hash: g-zSnaBXJnH7VoimReFb6KcLjIgHCU-hisiShtZ9hjQ
@@ -61,6 +62,7 @@ permissions:
   - 'revert all revisions'
   - 'schedule publishing of nodes'
   - 'set any published on date'
+  - 'setup own tfa'
   - 'use basic_editorial transition create_new_draft'
   - 'use basic_editorial transition publish'
   - 'use basic_editorial transition unpublish'

@@ -13,6 +13,7 @@ folder: ../config/splits/prod
 module: {  }
 theme: {  }
 complete_list:
+  - tfa.settings
   - backup_migrate.backup_migrate_schedule.daily_database_schedule
   - backup_migrate.backup_migrate_schedule.daily_files_schedule
   - backup_migrate.backup_migrate_schedule.daily_schedule
