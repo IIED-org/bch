@@ -1,0 +1,53 @@
+uuid: 4165a1b7-72f6-4b20-b322-14c974b6ee71
+langcode: en
+status: true
+dependencies: {  }
+id: biocultural_daily_database
+label: 'Biocultural daily database'
+config:
+  namer:
+    filename: biocultural_database
+    timestamp: true
+    timestamp_format: Y-m-d\TH-i-s
+  compressor:
+    compression: gzip
+  utils:
+    site_offline: false
+  metadata:
+    description: ''
+  db_exclude:
+    exclude_tables: {  }
+    nodata_tables:
+      cache_bootstrap: cache_bootstrap
+      cache_config: cache_config
+      cache_container: cache_container
+      cache_data: cache_data
+      cache_default: cache_default
+      cache_discovery: cache_discovery
+      cache_dynamic_page_cache: cache_dynamic_page_cache
+      cache_entity: cache_entity
+      cache_menu: cache_menu
+      cache_page: cache_page
+      cache_render: cache_render
+      cache_toolbar: cache_toolbar
+      sessions: sessions
+      watchdog: watchdog
+  private_files_exclude:
+    exclude_filepaths:
+      - backup_migrate
+  public_files_exclude:
+    exclude_filepaths:
+      - js
+      - css
+      - php
+      - styles
+      - 'config_*'
+      - .htaccess
+  encrypt:
+    encrypt: 0
+    encrypt_password: ''
+  notify:
+    notify_success_enable: 0
+    notify_success_email: webmaster@iied.org
+    notify_failure_enable: 0
+    notify_failure_email: webmaster@iied.org
