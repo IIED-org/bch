@@ -232,3 +232,19 @@ visibility: hidden;
 #klaro-cookie-notice button.cn-decline.klaro-close {
   visibility: inherit;
 }
+
+.table-styles {
+  @apply !max-w-none !w-full table-auto border-collapse;
+
+  & thead th {
+    @apply px-4 py-2 text-left font-semibold uppercase tracking-wider bg-gray-100 text-gray-700 border-b-2 border-gray-200;
+  }
+
+  & tbody td {
+    @apply px-4 py-2 border-b border-gray-200 text-gray-800;
+  }
+
+  & tbody tr:nth-child(even) {
+    @apply bg-gray-50; /* Subtle zebra striping */
+  }
+}
