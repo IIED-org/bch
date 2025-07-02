@@ -2990,6 +2990,11 @@ h1.page-title {
 .views-view-responsive-grid__item-inner {
   height: 100%;
 }
+.xxl\:flex {
+  @media (width >= 96rem) {
+    display: flex;
+  }
+}
 .xl\:flex {
   @media (width >= 80rem) {
     display: flex;
@@ -3039,7 +3044,6 @@ h1.page-title {
   }
 }
 .menu--main .menu-item {
-  margin-inline: calc(var(--spacing) * 6);
   height: 100%;
   border-bottom-style: var(--tw-border-style);
   border-bottom-width: 2px;
@@ -3053,6 +3057,12 @@ h1.page-title {
   transition-duration: var(--tw-duration, var(--default-transition-duration));
   --tw-duration: 300ms;
   transition-duration: 300ms;
+  @media (width >= 80rem) {
+    margin-inline: calc(var(--spacing) * 5);
+  }
+  @media (width >= 96rem) {
+    margin-inline: calc(var(--spacing) * 6);
+  }
   &:hover {
     border-color: var(--color-bc-coral-500);
     color: var(--color-bc-coral-500);
