@@ -689,7 +689,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
-      css_class: 'my-12 prose table-styles'
+      css_class: 'py-12 prose table-styles'
       header:
         result:
           id: result
