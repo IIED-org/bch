@@ -102,6 +102,8 @@ module:
   search_api_exclude: 0
   session_limit: 0
   simple_search_form: 0
+  simple_sitemap: 0
+  simple_sitemap_engines: 0
   svg_image: 0
   symfony_mailer_lite: 0
   system: 0
