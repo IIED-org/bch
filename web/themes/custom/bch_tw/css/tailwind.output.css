@@ -1,7 +1,5 @@
 /*! tailwindcss v4.0.6 | MIT License | https://tailwindcss.com */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400&family=Noto+Serif:ital,wght@0,400;1,700&display=swap');
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -380,6 +378,7 @@
     --font-display: "Noto Serif", serif;
     --font-body: "Noto Sans", sans-serif;
     --color-bc-coral-500: oklch(67.05% 0.1838 30.37);
+    --color-bc-coral-400: oklch(0.7188 0.1482 61.77);
     --color-bc-coral-300: oklch(77% 0.1531 62.86);
     --color-bc-yellow-500: oklch(86% 0.1769 90.8);
     --color-bc-yellow-300: oklch(89.22% 0.1206 95.27);
@@ -1669,6 +1668,9 @@
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
+  }
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
   }
@@ -2099,6 +2101,13 @@
   .first\:pt-0 {
     &:first-child {
       padding-top: calc(var(--spacing) * 0);
+    }
+  }
+  .hover\:bg-bc-coral-400 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-bc-coral-400);
+      }
     }
   }
   .hover\:bg-bc-sage-50 {
@@ -2899,21 +2908,34 @@
   font-family: 'Noto Serif';
   font-style: normal;
   font-weight: 400;
-  src: url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@400,700&display=swap') format('woff2'), font-display: swap;
+  src: url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@400&display=swap') format('woff2'), font-display: swap;
 }
 @font-face {
   font-family: 'Noto Serif';
   font-style: italic;
   font-weight: 700;
-  src: url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@400,700&display=swap') format('woff2'), font-display: swap;
+  src: url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@700&display=swap') format('woff2'), font-display: swap;
 }
 @font-face {
   font-family: 'Noto Sans';
   font-style: normal;
   font-weight: 400;
-  src: url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Serif:ital,wght@400,700&display=swap') format('woff2'), font-display: swap;
+  src: url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Serif:ital,wght@400&display=swap') format('woff2'), font-display: swap;
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Serif:ital,wght@700&display=swap') format('woff2'), font-display: swap;
 }
 @layer base {
+  :root {
+    --font-display: 'Noto Serif', serif;
+    --font-body: 'Noto Sans', sans-serif;
+  }
+  body {
+    font-family: var(--font-body);
+  }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
   }
@@ -2921,7 +2943,7 @@
     font-family: var(--font-body);
     color: var(--color-gray-950);
   }
-  nav, header, footer, aside {
+  nav, header, footer, aside, button, input, textarea, select {
     font-family: var(--font-body);
     color: var(--color-gray-950);
   }
@@ -3132,7 +3154,7 @@ h1.page-title {
   transition-duration: 150ms;
   &:hover {
     @media (hover: hover) {
-      background-color: var(--color-bc-yellow-500);
+      background-color: var(--color-bc-coral-400);
     }
   }
   &:hover {
