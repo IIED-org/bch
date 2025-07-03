@@ -121,8 +121,24 @@
         
       {{ content.field_paragraphs }}
 
-      {% if content.field_document %}
-        <div class="flex gap-2 prose prose-lg">{{ content.field_document }}</div>
+      {# {% if content.field_document %}
+        <div class="inline-block px-4 py-3 font-bold text-gray-800 transition-colors duration-150 ease-in bg-white border rounded-full shadow-sm cursor-pointer border-bc-yellow-500 hover:shadow-none hover:bg-bc-sage-50">
+       {{ content.field_document }}
+        </div>
+      {% endif %} #}
+
+      {% if node.field_document.entity %} 
+        {% set media_entity = node.field_document.entity %}
+        {% set file_field = media_entity.field_media_document %}
+
+        {% if file_field and file_field.entity %} 
+          {% set file_url = file_url(file_field.entity.uri.value) %}
+          {% set media_name = media_entity.name.value %}
+
+          <div class="inline-block px-4 py-3 mb-6 font-bold text-gray-800 transition-colors duration-150 ease-in bg-white border rounded-full shadow-sm cursor-pointer border-bc-yellow-500 hover:shadow-none hover:bg-bc-sage-50">
+            <a href="{{ file_url }}" type="{{ file_field.entity.filemime.value }}">{{ media_name }}</a>
+          </div>
+        {% endif %}
       {% endif %}
 
       {{ content.field_external_link }}
