@@ -269,3 +269,7 @@ visibility: hidden;
     @apply bg-gray-50; /* Subtle zebra striping */
   }
 }
+
+.path-frontpage .bg-header {
+  @apply bg-cyan-100;
+}
