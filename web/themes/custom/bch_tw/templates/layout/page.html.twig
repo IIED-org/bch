@@ -58,7 +58,7 @@
           {{ page.header }}
           <div class="hidden xl:flex">{{ page.primary_menu }}</div>
 
-          <div class="hidden ml-auto whitespace-nowrap xl:flex">
+          <div class="hidden ml-auto whitespace-nowrap xxl:flex">
             <a href="https://www.iied.org" aria-label="Visit IIED main site" class="items-center pb-2 text-gray-600 transition-colors mb-[2px] flex hover:text-bc-coral-500">IIED main site
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5" stroke-linecap="round">
                 <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd" />
@@ -135,6 +135,7 @@
 
 <div class="h-px bg-linear-to-r from-orange-200 via-bc-coral-500 to-orange-200"></div>
 
+{% block mainarea %}
   <div class="layout-container">
 
     {{ page.breadcrumb }}
@@ -169,6 +170,7 @@
 
   </div>
 
+{% endblock %}
 
   {% if page.footer %}
     <footer role="contentinfo" class="px-0 mx-0 my-4 sm:px-4 rounded-b-3xl sm:rounded-3xl bg-bc-sage-100 sm:mx-2 md:mx-4 min-h-56">

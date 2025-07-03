@@ -121,7 +121,9 @@
         
       {{ content.field_paragraphs }}
 
-      {{ content.field_document}}
+      {% if content.field_document %}
+        <div class="flex gap-2 prose prose-lg">{{ content.field_document }}</div>
+      {% endif %}
 
       {{ content.field_external_link }}
 

@@ -136,11 +136,18 @@
     } */
 
 /* Temp fix shouldn't be needed */
+
+.xxl\:flex {
+    @media (width >= 96rem) {
+      display: flex;
+    }
+}
+
 .xl\:flex {
     @media (width >= 80rem) {
       display: flex;
     }
-  }
+}
 
 .lg\:flex {
     @media (width >= 64rem) { 
@@ -173,7 +180,7 @@
   }
 
 .menu--main .menu-item {
-    @apply text-gray-900 text-lg border-b-2 border-transparent h-full transition-colors duration-300 pb-1 mx-6;
+    @apply text-gray-900 text-lg border-b-2 border-transparent h-full transition-colors duration-300 pb-1 xl:mx-5 2xl:mx-6;
 
     &:hover {
         @apply border-bc-coral-500 text-bc-coral-500;
@@ -231,4 +238,20 @@ visibility: hidden;
 
 #klaro-cookie-notice button.cn-decline.klaro-close {
   visibility: inherit;
+}
+
+.table-styles {
+  @apply !max-w-none !w-full table-auto border-collapse;
+
+  & thead th {
+    @apply px-4 py-2 text-left font-semibold uppercase tracking-wider bg-gray-100 text-gray-700 border-b-2 border-gray-200;
+  }
+
+  & tbody td {
+    @apply px-4 py-2 border-b border-gray-200 text-gray-800;
+  }
+
+  & tbody tr:nth-child(even) {
+    @apply bg-gray-50; /* Subtle zebra striping */
+  }
 }
