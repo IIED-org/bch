@@ -3191,6 +3191,9 @@ button.cn-decline.klaro-close {
     background-color: var(--color-gray-50);
   }
 }
+.path-frontpage .bg-header {
+  background-color: var(--color-cyan-100);
+}
 @layer base {
   [type='text'],input:where(:not([type])),[type='email'],[type='url'],[type='password'],[type='number'],[type='date'],[type='datetime-local'],[type='month'],[type='search'],[type='tel'],[type='time'],[type='week'],[multiple],textarea,select {
     appearance: none;
