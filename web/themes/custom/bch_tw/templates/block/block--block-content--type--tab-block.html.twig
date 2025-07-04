@@ -44,7 +44,7 @@
 
 <div{{ attributes.addClass(classes) }}>
 
-  <div x-data="{ activeTab: 'tab1', bgImage: 'url(\'/themes/custom/bch_tw/images/tab1.jpg\')' }">
+  <div x-data="{ activeTab: 'tab1', bgImage: 'url(\'/themes/custom/bch_tw/images/tab-1.jpg\')' }">
     <div class="relative overflow-hidden transition-all duration-200 ease-in-out rounded-3xl sm:px-4"
         x-bind:style="{ backgroundImage: bgImage, backgroundSize: 'cover', backgroundPosition: 'right bottom', backgroundRepeat: 'no-repeat', backgroundColor: '#F5F2EA' }">
         <div class="container relative z-10 px-4 py-12 mx-auto sm:px-0">
@@ -52,7 +52,7 @@
           <div class="flex flex-col">
             <div class="flex flex-wrap gap-2">
               <button
-                class="flex-grow px-6 py-6 text-base font-bold transition-all duration-300 rounded-full shadow-sm sm:flex-grow-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-400"
+                class="flex-grow px-6 py-6 text-base font-bold transition-all duration-300 rounded-full shadow-sm cursor-pointer sm:flex-grow-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-400"
                 :class="{
                   'bg-bc-yellow-500 text-gray-900 hover:bg-bc-yellow-500': activeTab === 'tab1',
                   'bg-white text-gray-600 hover:bg-bc-yellow-300': activeTab !== 'tab1'
@@ -60,12 +60,12 @@
                 aria-controls="tab1-content"
                 :aria-selected="activeTab === 'tab1'"
                 role="tab"
-                x-on:click="activeTab = 'tab1'; bgImage = 'url(\'/themes/custom/bch_tw/images/tab1.jpg\')'; "
+                x-on:click="activeTab = 'tab1'; bgImage = 'url(\'/themes/custom/bch_tw/images/tab-1.jpg\')'; "
               >
                 About biocultural heritage
               </button>
               <button
-                class="flex-grow px-6 py-6 text-base font-bold transition-all duration-300 rounded-full shadow-sm sm:flex-grow-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-400"
+                class="flex-grow px-6 py-6 text-base font-bold transition-all duration-300 rounded-full shadow-sm cursor-pointer sm:flex-grow-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-400"
                 :class="{
                   'bg-bc-yellow-500 text-gray-900 hover:bg-bc-yellow-500': activeTab === 'tab2',
                   'bg-white text-gray-600 hover:bg-bc-yellow-300': activeTab !== 'tab2'
@@ -78,7 +78,7 @@
                 Global goals and local resilience
               </button>
               <button
-                class="flex-grow px-6 py-6 text-base font-bold transition-all duration-300 rounded-full shadow-sm sm:flex-grow-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-400"
+                class="flex-grow px-6 py-6 text-base font-bold transition-all duration-300 rounded-full shadow-sm cursor-pointer sm:flex-grow-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-400"
                 :class="{
                   'bg-bc-yellow-500 text-gray-900 hover:bg-bc-yellow-500': activeTab === 'tab3',
                   'bg-white text-gray-600 hover:bg-bc-yellow-300': activeTab !== 'tab3'
@@ -129,7 +129,6 @@
           </div>
 
         </div>
-
 
     </div>
   </div>
