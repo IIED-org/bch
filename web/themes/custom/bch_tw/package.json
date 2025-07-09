@@ -4,9 +4,9 @@
   "description": "bch_tw theme, generated from starterkit_theme. Additional information on generating themes can be found in the [Starterkit documentation](https://www.drupal.org/docs/core-modules-and-themes/core-themes/starterkit-theme).",
   "main": "index.js",
   "scripts": {
-    "dev": "npx @tailwindcss/cli -i ./css/tailwind.css -o ./css/tailwind.output.css",
-    "watch": "npx @tailwindcss/cli -i ./css/tailwind.css -o ./css/tailwind.output.css --watch",
-    "build:prod": "NODE_ENV=production npx @tailwindcss/cli -i ./css/tailwind.css -o ./css/tailwind.output.css --minify"
+    "dev": "npx @tailwindcss/cli -i ./css/tailwind.css -o ./css/styles.css",
+    "watch": "npx @tailwindcss/cli -i ./css/tailwind.css -o ./css/styles.css --watch",
+    "build:prod": "NODE_ENV=production npx @tailwindcss/cli -i ./css/tailwind.css -o ./css/styles.css --minify"
   },
   "author": "",
   "license": "ISC",

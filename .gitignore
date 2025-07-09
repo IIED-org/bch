@@ -77,3 +77,4 @@ node_modules
 
 # Dev mode: don't include tailwind.css 
 tailwind.css
+styles.css

@@ -36,11 +36,13 @@ services:
   node:
     type: node:20
     scanner: false
+    build:
+      cmd: cd /app/web/themes/custom/bch_tw && npm install && npm run dev
   mailhog:
-    type: mailhog
-    hogfrom:
-      - appserver
-    portforward: true
+      type: mailhog
+      hogfrom:
+        - appserver
+      portforward: true
 proxy:
   adminer:
     - adminer.iied-bch.lndo.site
