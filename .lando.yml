@@ -36,6 +36,8 @@ services:
   node:
     type: node:20
     scanner: false
+    build:
+      cmd: cd /app/web/themes/custom/bch_tw && npm install && npm run dev
   mailhog:
     type: mailhog
     hogfrom:
