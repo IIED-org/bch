@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3eb7c1750886dff0f33cc597614827ea",
+    "content-hash": "e57ac2e0ac057de8c0f147eed87af9b1",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2924,6 +2924,67 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/captcha",
                 "issues": "https://www.drupal.org/project/issues/captcha"
+            }
+        },
+        {
+            "name": "drupal/captcha_keypad",
+            "version": "1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/captcha_keypad.git",
+                "reference": "8.x-1.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/captcha_keypad-8.x-1.7.zip",
+                "reference": "8.x-1.7",
+                "shasum": "c7b96ac36593eab8b746ba06dd98001d51fa950f"
+            },
+            "require": {
+                "drupal/core": ">=8",
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "drupal/captcha": "^2.0",
+                "drupal/forum": "^1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.7",
+                    "datestamp": "1738938330",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Marcelo Vani",
+                    "homepage": "https://about.me/marcelovani",
+                    "email": "marcellovani@yahoo.co.uk",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "marcelovani",
+                    "homepage": "https://www.drupal.org/user/854220"
+                }
+            ],
+            "description": "This module provides an alternative captcha security.",
+            "homepage": "http://drupal.org/project/captcha_keypad",
+            "keywords": [
+                "anti-spam",
+                "bot",
+                "security"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/captcha_keypad",
+                "issues": "http://drupal.org/project/captcha_keypad"
             }
         },
         {

@@ -1,9 +1,9 @@
 langcode: en
 enable_globally: 0
 enable_globally_on_admin_routes: false
-default_challenge: friendlycaptcha/friendlycaptcha
+default_challenge: captcha_keypad/Keypad
 description: 'This question is for testing whether or not you are a human visitor and to prevent automated spam submissions.'
-title: CAPTCHA
+title: ''
 administration_mode: false
 administration_mode_on_admin_routes: false
 whitelist_ips: ''
