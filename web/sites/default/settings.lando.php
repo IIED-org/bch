@@ -152,7 +152,7 @@ ini_set('display_startup_errors', TRUE);
  * domain (usually production, sometimes development) with the images.
  */
 
- $config['stage_file_proxy.settings']['origin'] = 'https://stage.bch.iied.org';
+ $config['stage_file_proxy.settings']['origin'] = 'https://biocultural.iied.org';
 
 /**
  * Use "local" config split for development

@@ -1,0 +1,6 @@
+_core:
+  default_config_hash: 5zA25Om3t7KoPZiwxW7Xpfl06LTWKLO604EzB7zjwFE
+langcode: en
+captcha_keypad_code_size: 4
+captcha_keypad_shuffle_keypad: true
+captcha_keypad_forms: {  }
