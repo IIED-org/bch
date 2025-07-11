@@ -77,4 +77,3 @@ node_modules
 
 # Prod css: don't include styles.css 
 styles.css
-tailwind.output.css
