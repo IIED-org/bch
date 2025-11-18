@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e57ac2e0ac057de8c0f147eed87af9b1",
+    "content-hash": "f34edcbe35ed5f8c3c5e68036773fde3",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5015,17 +5015,17 @@
         },
         {
             "name": "drupal/easy_email_theme",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/easy_email_theme.git",
-                "reference": "1.0.0"
+                "reference": "1.1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/easy_email_theme-1.0.0.zip",
-                "reference": "1.0.0",
-                "shasum": "daaca22af0a2ba337c847be3ad6d6f18eb21f3fa"
+                "url": "https://ftp.drupal.org/files/projects/easy_email_theme-1.1.0.zip",
+                "reference": "1.1.0",
+                "shasum": "14270a75753e3c228a2a281b266b7e62c270b4f0"
             },
             "require": {
                 "drupal/core": "^10.2 || ^11"
@@ -5033,8 +5033,8 @@
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "1.0.0",
-                    "datestamp": "1729101397",
+                    "version": "1.1.0",
+                    "datestamp": "1757509759",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
