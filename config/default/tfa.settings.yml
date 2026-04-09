@@ -3,9 +3,9 @@ _core:
 langcode: en
 enabled: true
 required_roles:
+  authenticated: authenticated
   content_editor: content_editor
-  authenticated: '0'
-  administrator: '0'
+  administrator: administrator
 send_plugins: {  }
 login_plugins:
   tfa_trusted_browser: tfa_trusted_browser
@@ -18,10 +18,8 @@ allowed_validation_plugins:
   tfa_totp: tfa_totp
 default_validation_plugin: tfa_totp
 validation_plugin_settings:
-  tfa_recovery_code:
-    recovery_codes_amount: 10
   tfa_totp:
-    time_skew: 10
+    time_skew: 2
     site_name_prefix: 1
     name_prefix: TFA
     issuer: 'BCH website'
@@ -30,6 +28,8 @@ validation_plugin_settings:
     site_name_prefix: 1
     name_prefix: TFA
     issuer: Drupal
+  tfa_recovery_code:
+    recovery_codes_amount: 10
 validation_skip: 1
 users_without_tfa_redirect: true
 reset_pass_skip_enabled: true
