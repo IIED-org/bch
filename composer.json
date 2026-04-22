@@ -47,7 +47,7 @@
         "drupal/password_policy": "^4.0",
         "drupal/password_policy_extras": "^4.0",
         "drupal/project_browser": "@alpha",
-        "drupal/publication_date": "^3.0",
+        "drupal/publication_date": "^3.1",
         "drupal/rabbit_hole": "^1.0",
         "drupal/real_aes": "^2.6",
         "drupal/session_limit": "^2.0",
