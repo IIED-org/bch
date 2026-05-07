@@ -17,6 +17,8 @@ hooks:
   post-start:
     - composer: install
     - exec: drush updb
+    - exec: "cd web/themes/custom/bch_tw && npm install ignore-warnings"
+    - exec: "cd web/themes/custom/bch_tw && npm run dev"
     - exec: drush cr
 
 # Key features of DDEV's config.yaml:

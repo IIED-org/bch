@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: local
 label: Local
-description: 'Local development (e.g. lando)'
+description: 'Local development (e.g. lando/ddev)'
 weight: 0
 stackable: false
 no_patching: false
@@ -17,4 +17,5 @@ module:
   views_ui: 0
 theme: {  }
 complete_list: {  }
-partial_list: {  }
+partial_list:
+  - tfa.settings
