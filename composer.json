@@ -71,7 +71,8 @@
             "cweagans/composer-patches": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
-            "php-http/discovery": true
+            "php-http/discovery": true,
+            "symfony/runtime": true
         },
         "sort-packages": true,
         "optimize-autoloader": true
@@ -82,7 +83,6 @@
                 "web-root": "web/"
             },
             "file-mapping": {
-                "[web-root]/.htaccess": false,
                 "[web-root]/robots.txt": false,
                 "[web-root]/sites/development.services.yml": false
             }
