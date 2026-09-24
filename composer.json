@@ -22,7 +22,7 @@
         "drupal/backup_migrate": "^5.1",
         "drupal/backup_migrate_aws_s3": "^6.0",
         "drupal/captcha": "^2.0",
-        "drupal/captcha_keypad": "^1.7",
+        "drupal/captcha_keypad": "^2.0",
         "drupal/clamav": "^2.1",
         "drupal/config_split": "^2.0",
         "drupal/contact_block": "^2.0",
