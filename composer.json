@@ -46,6 +46,7 @@
         "drupal/easy_email_theme": "^1.1",
         "drupal/eca": "^2.1",
         "drupal/field_group": "^4.1@alpha",
+        "drupal/gin": "^5.0",
         "drupal/menu_link_attributes": "^1.10",
         "drupal/paragraphs": "^1.18",
         "drupal/password_policy": "^4.0",
