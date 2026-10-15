@@ -42,6 +42,7 @@
         "drupal/drupal_cms_project": "~1.0.0",
         "drupal/drupal_cms_seo_tools": "^1.2",
         "drupal/drupal_cms_starter": "~1.0.2",
+        "drupal/easy_breadcrumb": "^2.0",
         "drupal/easy_email_theme": "^1.1",
         "drupal/eca": "^2.1",
         "drupal/field_group": "^4.1@alpha",
